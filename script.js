@@ -4,7 +4,7 @@ function processDetails() {
   $.ajax({
     url: 'dataphp.php',
     type: 'POST',
-    data: { user: username, pass: password },
+    data: {username, password},
     async: false,
     success: function (data) {
       alert(data);
