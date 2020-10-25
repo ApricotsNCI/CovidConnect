@@ -24,7 +24,7 @@ $count = mysqli_num_rows($result);
 if($count == 1) {
          echo "Login successful! Welcome "+$user+"!";
       }else {
-         echo "Your Login Name or Password is invalid";
+         echo "Your Login Name or Password is invalid "+$user+" "+$pass;
 }
 
 ?>
