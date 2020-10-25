@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id FROM users WHERE username = '$user' and password = '$pass'";
+$sql = "SELECT idusers FROM users WHERE username = '$user' and password = '$pass'";
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 $active = $row['active'];
