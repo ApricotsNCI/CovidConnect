@@ -7,8 +7,8 @@ $db = "heroku_ee0928b4ad437e0";
 
 $conn = new mysqli($server, $username, $password, $db);
 
-$user = $conn->real_escape_string($_POST[username]);
-$pass = $conn->real_escape_string($_POST[password]);
+$user = mysqli_real_escape_string($conn,$_POST['username']);
+$pass = mysqli_real_escape_string($conn,$_POST['password']);
 
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
@@ -24,7 +24,7 @@ $count = mysqli_num_rows($result);
 if($count == 1) {
          echo "Login successful! Welcome "+$user+"!";
       }else {
-         echo "Your Login Name or Password is invalid "+$user+" "+$pass;
+         echo "Your Login Name or Password is invalid ";
 }
 
 ?>
