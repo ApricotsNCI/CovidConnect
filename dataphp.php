@@ -1,21 +1,24 @@
 <?php
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$servername = "eu-cdbr-west-03.cleardb.net";
+$username = "b66c12d2a6df51";
+$password = "42536d71";
+$dbname = "CovidConnect Database";
 
-$username = stripcslashes($username);
-$password = stripcslashes($password);
-$username = mysql_real_escape_string($username);
-$password = mysql_real_escape_string($password);
+$user = $_POST[username];
+$pass = $_POST[password];
 
-mysql_connect("eu-cdbr-west-03.cleardb.net","b66c12d2a6df51", "42536d71");
-mysql_select_db("CovidConnect Database");
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-$result = mysql_query("SELECT * FROM users WHERE username = '$username' AND password = '$password'")
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$result = mysql_query("SELECT * FROM users WHERE username = '$user' AND password = '$pass'")
 						or die("Failed to query database ".mysql_error());
 
 $row = mysql_fetch_array($result);
-if($row['username']==$username && $row['password']==$password){
+if($row['username']==$user && $row['password']==$pass){
 	echo "Login success! Welcome ".$row['username'];
 }else{
 	echo "Failed to login.";
