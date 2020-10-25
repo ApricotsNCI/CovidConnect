@@ -3,7 +3,7 @@
 $servername = "eu-cdbr-west-03.cleardb.net";
 $username = "b66c12d2a6df51";
 $password = "42536d71";
-$dbname = "heroku_ee0928b4ad437e0";
+$dbname = "CovidConnect Database";
 
 $user = $_POST[username];
 $pass = $_POST[password];
