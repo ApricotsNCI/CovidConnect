@@ -1,13 +1,13 @@
 function processDetails() {
-  var name = document.getElementById("name").value;
+  var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
   $.ajax({
     url: 'dataphp.php',
     type: 'POST',
-    data: { name: name, password: password },
+    data: { username: username, password: password },
     async: false,
     success: function (data) {
-      alert("The data being returned from the server is : " + data);
+      alert(data);
     },
     cache: false
   });
