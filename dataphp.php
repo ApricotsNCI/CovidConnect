@@ -9,7 +9,7 @@ $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);
 
 mysql_connect("eu-cdbr-west-03.cleardb.net","b66c12d2a6df51", "42536d71");
-mysql_select_db("heroku_ee0928b4ad437e0");
+mysql_select_db("CovidConnect Database");
 
 $result = mysql_query("SELECT * FROM users WHERE username = '$username' AND password = '$password'")
 						or die("Failed to query database ".mysql_error());
