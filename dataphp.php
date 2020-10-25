@@ -8,8 +8,8 @@ $password = stripcslashes($password);
 $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);
 
-mysql_connect("localhost:8081","root", "");
-mysql_select_db("covid_connect");
+mysql_connect("eu-cdbr-west-03.cleardb.net","b66c12d2a6df51", "42536d71");
+mysql_select_db("heroku_ee0928b4ad437e0");
 
 $result = mysql_query("SELECT * FROM users WHERE username = '$username' AND password = '$password'")
 						or die("Failed to query database ".mysql_error());
