@@ -15,14 +15,19 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM `users` WHERE `username`='".$conn->real_escape_string($user)."' AND `password`='".$conn->real_escape_string($pass)."'";
+$sql = "SELECT * FROM `users` WHERE `username`='".$conn->real_escape_string($user)."' and `password`='".$conn->real_escape_string($pass)."'";
 
-if($result = $conn->query($sql)) {
-    foreach($result as $row) {
-        echo "Login successful!";
-    }
-} else {
-    throw new Exception($conn->error);
+$result = $conn->query($sql);
+
+$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+$active = $row['active'];
+
+$count = mysqli_num_rows($result);
+
+if($count == 1) {
+         $echo "Login successful! Welcome ".$user."!";
+      }else {
+         $echo "Your Login Name or Password is invalid";
 }
-
 ?>
