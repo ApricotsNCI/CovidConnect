@@ -11,15 +11,14 @@ $pass = $conn->real_escape_string($_POST[password]);
 $conn = new mysqli($server, $username, $password, $db);
 
 if ($conn->connect_error) {
-	echo $server+" "+$username+" "+$password+" "+$db;
 	die("Connection failed: " . $conn->connect_error);
 }
 
 $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
 
-$result = $conn->query($sql);
+$result = $conn -> query($sql);
 
-$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+$row = $result -> fetch_array(MYSQLI_ASSOC);
 
 $active = $row['active'];
 
