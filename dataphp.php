@@ -1,10 +1,9 @@
 <?php
-$url = parse_url(getenv("mysql://b66c12d2a6df51:42536d71@eu-cdbr-west-03.cleardb.net/heroku_ee0928b4ad437e0?reconnect=true"));
 
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], 1);
+$server = "eu-cdbr-west-03.cleardb.net";
+$username = "b66c12d2a6df51";
+$password = "42536d71";
+$db = "heroku_ee0928b4ad437e0";
 
 $user = $_POST[username];
 $pass = $_POST[password];
