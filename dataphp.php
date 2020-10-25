@@ -12,7 +12,8 @@ $pass = $_POST[password];
 $conn = new mysqli($server, $username, $password, $db);
 
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+	echo $server+" "+$username+" "+$password+" "+$db;
+	die("Connection failed: " . $conn->connect_error);
 }
 
 $result = mysql_query("SELECT * FROM users WHERE username = '$user' AND password = '$pass'")
