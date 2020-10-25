@@ -15,13 +15,6 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
-$result = mysql_query("SELECT * FROM users WHERE username = '$user' AND password = '$pass'")
-						or die("Failed to query database ".mysql_error());
+echo "passed";
 
-$row = mysql_fetch_array($result);
-if($row['username']==$user && $row['password']==$pass){
-	echo "Login success! Welcome ".$row['username'];
-}else{
-	echo "Failed to login.";
-}
 ?>
