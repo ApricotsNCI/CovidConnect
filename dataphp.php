@@ -15,6 +15,14 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
-echo "passed";
+$sql = "SELECT * FROM `users` WHERE `username`='".$conn->real_escape_string($user)."' AND `password`='".$conn->real_escape_string($pass)."'";
+
+if($result = $conn->query($sql)) {
+    foreach($result as $row) {
+        echo "Login successful!";
+    }
+} else {
+    throw new Exception($conn->error);
+}
 
 ?>
