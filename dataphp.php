@@ -1,14 +1,15 @@
 <?php
+$url = parse_url(getenv("mysql://b66c12d2a6df51:42536d71@eu-cdbr-west-03.cleardb.net/heroku_ee0928b4ad437e0?reconnect=true"));
 
-$servername = "eu-cdbr-west-03.cleardb.net";
-$username = "b66c12d2a6df51";
-$password = "42536d71";
-$dbname = "CovidConnect Database";
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
 $user = $_POST[username];
 $pass = $_POST[password];
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($server, $username, $password, $db);
 
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
