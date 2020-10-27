@@ -1,12 +1,14 @@
 body {
 }
-ul {
+#nav-link{
   list-style-type: none;
   margin: 0;
   padding: 0;
+  background-color: #9E9795;
 }
+
 #navbar-nav{
-  color: #9E9795;
+  background-color: #9E9795;
 }
 #wrapper {
     overflow-x: hidden;
