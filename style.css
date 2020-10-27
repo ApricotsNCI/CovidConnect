@@ -5,6 +5,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+#navbar-nav{
+  color: #9E9795;
+}
 #wrapper {
     overflow-x: hidden;
  }
