@@ -2,7 +2,7 @@ function processDetails() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
   $.ajax({
-    url: 'dataphp.php',
+    url: 'Phps/loginphp.php',
     type: 'POST',
     data: { username: username, password: password },
     async: false,
