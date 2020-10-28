@@ -4,44 +4,38 @@ body {
 #wrapper {
     overflow-x: hidden;
  }
+ .navbar {
+   margin-bottom: 0;
+   border-radius: 0;
+ }
 
-#sidebar-wrapper {
-  min-height: 100vh;
-  margin-left: -15rem;
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
-}
+ /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+ .row.content {height: 450px}
 
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
-}
+ /* Set gray background color and 100% height */
+ .sidenav {
+   padding-top: 20px;
+   background-color: #f1f1f1;
+   height: 100%;
+ }
 
-#sidebar-wrapper .list-group {
-  width: 15rem;
-}
+ /* Set black background color, white text and some padding */
+ footer {
+   background-color: #555;
+   color: white;
+   padding: 15px;
+ }
 
-#page-content-wrapper {
-  min-width: 100vw;
-}
+ /* On small screens, set height to 'auto' for sidenav and grid */
+ @media screen and (max-width: 767px) {
+   .sidenav {
+     height: auto;
+     padding: 15px;
+   }
+   .row.content {height:auto;}
+ }
 
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 0;
-}
 
-@media (min-width: 768px) {
-  #sidebar-wrapper {
-    margin-left: 0;
-  }
 
-  #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
-  }
 
-  #wrapper.toggled #sidebar-wrapper {
-    margin-left: -15rem;
-  }
 }
