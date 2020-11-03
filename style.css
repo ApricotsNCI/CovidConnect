@@ -34,3 +34,7 @@ body {
    }
    .row.content {height:auto;}
  }
+
+.checked{
+  color:orange;
+}
