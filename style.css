@@ -43,3 +43,31 @@ body, .sticky-footer-wrapper {
    }
    .row.content {height:auto;}
  }
+
+/*Star rating*/
+input[type="radio"]{
+  -webkit-appearance: none;
+  box-shadow:none;
+  outline:none;
+  cursor:pointer;
+}
+input[type="radio"]::after{
+  content:'\2605';
+  font-size:32px;
+}
+input[type="radio"]:invalid::after{
+  color:#ccc;
+}
+.rating:hover input[type="radio"]:hover ~ input[type="radio"]:invalid::after,
+.rating input[type="radio"]:focus ~ input[type="radio"]:invalid::after
+{
+  color:#ccc;
+}
+.rating input[type="radio"]:valid{
+  color:orange;
+}
+.rating input[type="radio"]:checked ~ input[type="radio"]:not(:checked)::after
+{
+  content:'\2606';
+  color:#ccc;
+}
