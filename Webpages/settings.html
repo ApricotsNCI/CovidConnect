@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="../style.css" rel="stylesheet">
+    <link href="fontawesome/cc/all.css" rel="stylesheet">
   </head>
 
   <body id="settings">
@@ -54,17 +55,8 @@
           <h3>Test</h3>
           <p>Lorem ipsum...</p>
         </div>
-        <div class="col-sm-2 sidenav">
-          <div class="well">
-            <p>ADS</p>
-          </div>
-          <div class="well">
-            <p>ADS</p>
-          </div>
-        </div>
       </div>
     </div>
-
     <div class="container">
       <div class ="leftbox">
         <nav>
@@ -157,12 +149,26 @@
       </div>
     </div>
 
-    <script scr="../script.js">
+    <script scr="../script.js"></script>
     <script>
+        const tabBtn = document.querySelectorAll(".tab");
+        const tabBtn = document.querySelectorAll(".tabShow");
 
+        function tabs(panelIndex){
+          tab.forEach(function(node){
+              node.style.display="none";
+
+          });
+          tab[panelIndex].style.display= "block";
+        }
+        tabs(0);
     </script>
+    <script>
+        $(".tabs").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
 
-    </script>    >
+        })
+    </script>
     <footer class="container-fluid text-center">
       <p>Covid Connect Footer</p>
     </footer>
