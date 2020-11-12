@@ -31,6 +31,7 @@ body, .sticky-footer-wrapper {
    bottom:0px;
    min-width: 100%;
    max-width: 100%;
+   position: absolute;
  }
  /* On small screens, set height to 'auto' for sidenav and grid */
  @media screen and (max-width: 767px) {
@@ -78,12 +79,6 @@ input[type="radio"]:invalid::after{
   .row.content {height: auto;}
 }
 /*Reg*/
-body{
-	margin:0;
-	color:#6a6f8c;
-	background:#c8c8c8;
-	font:600 16px/18px 'Open Sans',sans-serif;
-}
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both;display:block}
