@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="../style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-inverse">
@@ -16,65 +15,73 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Covid Connect</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="Webpages/home.html">Home</a></li>
-            <li><a href="Webpages/Profile.HTML">Profile</a></li>
-            <li><a href="Webpages/chatroulette.html">Chat Roulette</a></li>
-            <li><a href="Webpages/Connections.html">Connections</a></li>
-            <li><a href="Webpages/connectionafterchat.html">Connection after chat</a></li>
-            <li><a href="Webpages/rating.html">Rating</a></li>
-            <li><a href="Webpages/individualchat.html">Individual Chat</a></li>
-            <li><a href="Webpages/supportpage.html">Support Page</a></li>
-            <li><a href="Webpages/supportchat.html">Support Chat</a></li>
-            <li><a href="Webpages/settings.html">Settings</a></li>
-          </ul>
+
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container-fluid text-center">
-      <div class="row content">
-        <div class="col-sm-2 sidenav">
-          <p><a href="#">Link</a></p>
-          <p><a href="#">Link</a></p>
-          <p><a href="#">Link</a></p>
-        </div>
-        <div class="col-sm-8 text-left">
-          <h1>Login/Registration Page</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <h1>Test</h1>
-          <p>Name</p>
-          <input type="text" id="username" />
-          <p>Password</p>
-          <input type="password" id="password" />
-          <button onclick="processDetails()">Click me!</button>
-          <script src="../script.js"></script>
-          <hr>
-          <h3>Test</h3>
-          <p>Lorem ipsum...</p>
-        </div>
-        <div class="col-sm-2 sidenav">
-          <div class="well">
-            <p>ADS</p>
-          </div>
-          <div class="well">
-            <p>ADS</p>
-          </div>
-        </div>
-      </div>
+    <div class="login-wrap">
+    	<div class="login-html">
+    		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+    		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+    		<div class="login-form">
+    			<div class="sign-in-htm">
+    				<div class="group">
+    					<label for="user" class="label">Username</label>
+    					<input id="user" type="text" class="input">
+    				</div>
+    				<div class="group">
+    					<label for="pass" class="label">Password</label>
+    					<input id="pass" type="password" class="input" data-type="password">
+    				</div>
+    				<div class="group">
+    					<input id="check" type="checkbox" class="check" checked>
+    					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+    				</div>
+    				<div class="group">
+    					<input type="submit" class="button" value="Sign In">
+    				</div>
+    				<div class="hr"></div>
+    				<div class="foot-lnk">
+    					<a href="#forgot">Forgot Password?</a>
+    				</div>
+    			</div>
+    			<div class="sign-up-htm">
+    				<div class="group">
+    					<label for="user" class="label">Username</label>
+    					<input id="user" type="text" class="input">
+    				</div>
+    				<div class="group">
+    					<label for="pass" class="label">Password</label>
+    					<input id="pass" type="password" class="input" data-type="password">
+    				</div>
+    				<div class="group">
+    					<label for="pass" class="label">Repeat Password</label>
+    					<input id="pass" type="password" class="input" data-type="password">
+    				</div>
+    				<div class="group">
+    					<label for="pass" class="label">Email Address</label>
+    					<input id="pass" type="text" class="input">
+    				</div>
+    				<div class="group">
+    					<input type="submit" class="button" value="Sign Up">
+    				</div>
+    				<div class="hr"></div>
+    				<div class="foot-lnk">
+    					<label for="tab-1">Already Member?</a>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </div>
     <footer class="container-fluid text-center">
       <p>Covid Connect Footer</p>
     </footer>
   </body>
-</html>
-    </body>
 </html>
