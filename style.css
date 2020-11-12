@@ -1,11 +1,13 @@
 body, .sticky-footer-wrapper {
    min-height:100vh;
+   margin:0;
+   color:#6a6f8c;
+   background:#c8c8c8;
+   font:600 16px/18px 'Open Sans',sans-serif;
 }
-
 .flex-fill {
    flex:1 1 auto;
 }
-
 #wrapper {
     overflow-x: hidden;
  }
@@ -13,28 +15,23 @@ body, .sticky-footer-wrapper {
    margin-bottom: 0;
    border-radius: 0;
  }
-
  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
  .row.content {height: 450px}
-
  /* Set gray background color and 100% height */
  .sidenav {
    padding-top: 20px;
    background-color: #f1f1f1;
    height: 100%;
  }
-
  /* Set black background color, white text and some padding */
  footer {
    background-color: #555;
    color: white;
    padding: 15px;
-   position: absolute;
    bottom:0px;
    min-width: 100%;
    max-width: 100%;
  }
-
  /* On small screens, set height to 'auto' for sidenav and grid */
  @media screen and (max-width: 767px) {
    .sidenav {
@@ -43,7 +40,6 @@ body, .sticky-footer-wrapper {
    }
    .row.content {height:auto;}
  }
-
 /*Star rating*/
 input[type="radio"]{
   -webkit-appearance: none;
@@ -71,102 +67,164 @@ input[type="radio"]:invalid::after{
   content:'\2606';
   color:#ccc;
 }
+/*settings page*/
 
-//settings Page
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto");
-.settings{
-  background: linear-gradient(to right, #2ed573, #f9ca24);
-  overflow-x: hidden;
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #f1f1f1;
+  height: 100%;
 }
-.container{
-  background: #fff;
-  width: 540px;
-  height: 450px;
-  margin: 0 auto;
-  position: relative;
-  margin-top: 10%;
-  box-shadow: 2px 5px 20px rgba(119, 119,119, .5);
+
+  .row.content {height: auto;}
 }
-.leftbox{
-  float: left;
-  top: -5%;
-  left: 5%;
-  position: absolute;
-  width: 15%;
-  height: 110%;
-  background:#2ed573;
-  box-shadow: 3px 3px 10px rgba(119, 119,119, .5);
-  border: .lem solid #fff;
+/*Reg*/
+body{
+	margin:0;
+	color:#6a6f8c;
+	background:#c8c8c8;
+	font:600 16px/18px 'Open Sans',sans-serif;
 }
-nav a{
-  list-style: none;
-  padding: 35px;
-  color: #fff;
-  font-size: l.lem;
-  display: block;
-  transition:all .3s ease-in-out;
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
-nav a:hover{
-  color: #10ac84;
-  cursor: pointer;
-  transform: scale(1.2);
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(40,57,101,.9);
 }
-nav a:first-child{
-  margin-top: 7px;
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
 }
-nav a.active{
-  color: #10ac84;
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display:none;
 }
-.rightbox{
-  width: 60%;
-  margin-left: 27%;
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
 }
-.tabShow{
-  transition: all .5s ease-in;
-  width: 8%;
-  position: absolute;
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
 }
-h1{
-  font-family: "Montserrat", sans-serif;
-  color: #7ed386;
-  font-size: 1.2rem;
-  margin-top: 40px;
-  margin-bottom: 35px;
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
 }
-h2{
-  color: #777;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  font-size: 8px;
-  letter-spacing: 1px;
-  margin-right: 10px;
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
 }
-.input, p{
-  border: 0;
-  border-bottom: 1px solid #3fb6a8;
-  width: 80%;
-  font-family: "Montserrat", sans-serif;
-  font-size:  .7em;
-  padding: 7px 0;
-  color: #070707;
-  outline: none;
+.login-form .group{
+	margin-bottom:15px;
 }
-span{
-  font-size: .7em;
-  color: #777;
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
 }
-.btn{
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  font-size: 15px;
-  border: 0;
-  color: #fff;
-  background: #7ed386;
-  padding: 7px 15px;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,.2);
-  cursor: pointer;
-  margin-top: 15px;
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
 }
-.tabShow{
-  display: none;
+.login-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+.login-form .group .button{
+	background:#1161ee;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
 }
