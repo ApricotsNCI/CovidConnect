@@ -35,9 +35,6 @@
           </div>
         </div>
       </nav>
-
-     <body>
-
      <div class="container-fluid">
        <div class="row content">
          <div class="col-sm-3 sidenav">
@@ -52,10 +49,10 @@
                  </button>
                </span>
              </div>
-             <li class="active"><a href="./Phps/account.php">Account Settings</a></li>
-             <li><a href="../Phps/privacy.php">Privacy Settings</a></li>
-             <li><a href="../Phps/billing.php">Billing Settings</a></li>
-             <li><a href="../Phps/notifications.php">Notifications Settings</a></li>
+             <li class="active"><a href="./Phps/account.php" onclick="settingsChange()">Account Settings</a></li>
+             <li><a href="../Phps/privacy.php" onclick="settingsChange()">Privacy Settings</a></li>
+             <li><a href="../Phps/billing.php" onclick="settingsChange()">Billing Settings</a></li>
+             <li><a href="../Phps/notifications.php" onclick="settingsChange()">Notifications Settings</a></li>
            </ul><br>
          </div>
          <div class="col-sm-9">
@@ -72,56 +69,13 @@
            <h3>Password</h3>
            <input type="password" class="input" value="password">
            <br>
-           <button class="btn">Update</button>
+           <button class="btn" style="margin-bottom:20%;">Update</button>
          </div>
        </div>
      </div>
-     <script>
-     $(function() {
-
-         var newHash      = "",
-             $mainContent = $("#main-content"),
-             $pageWrap    = $("#page-wrap"),
-             baseHeight   = 0,
-             $el;
-
-         $pageWrap.height($pageWrap.height());
-         baseHeight = $pageWrap.height() - $mainContent.height();
-
-         $("nav").delegate("a", "click", function() {
-             window.location.hash = $(this).attr("href");
-             return false;
-         });
-
-         $(window).bind('hashchange', function(){
-
-             newHash = window.location.hash.substring(1);
-
-             if (newHash) {
-                 $mainContent
-                     .find("#guts")
-                     .fadeOut(200, function() {
-                         $mainContent.hide().load(newHash + " #guts", function() {
-                             $mainContent.fadeIn(200, function() {
-                                 $pageWrap.animate({
-                                     height: baseHeight + $mainContent.height() + "px"
-                                 });
-                             });
-                             $("nav a").removeClass("current");
-                             $("nav a[href='"+newHash+"']").addClass("current");
-                         });
-                     });
-             };
-
-         });
-
-         $(window).trigger('hashchange');
-
-     });
-
-     </script>
      <footer class="container-fluid text-center">
        <p>Covid Connect Footer</p>
      </footer>
+     <script href="../script.js"></script>
    </body>
 </html>
