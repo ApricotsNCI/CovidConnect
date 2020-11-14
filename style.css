@@ -175,14 +175,6 @@ a{color:inherit;text-decoration:none;}
   height: auto;
 }
 
-<<<<<<< HEAD
-/*Support Page*/
-.hidden{
-  display:none;
-}
-.onclick{
-  cursor:pointer;
-=======
 
 /*Chat Roulette*/
 /* Remove the navbar's default margin-bottom and rounded borders */
@@ -269,5 +261,35 @@ footer {
 .time-left {
   float: left;
   color: #999;
->>>>>>> 2c16e9988852d50186181d805af41148349661ba
+}
+
+/* SupportPage Div styles */
+#wrapper{
+	width:1000px;
+	height:1000px;
+	background-color:white;
+	margin:auto;
+}
+#two{
+	width:100%;
+	height:50%;
+}
+#midleft{
+	background-color:pink;
+	width:70%;
+	height:100%;
+	float:left;
+}
+#midright{
+	background-color:white;
+	width:30%;
+	height:100%;
+	float:right;
+}
+
+.side{
+	background:orange;
+	height:23.4%;
+	margin-bottom:3.5%;
+	width:100%;
 }
