@@ -1,13 +1,14 @@
 body, .sticky-footer-wrapper {
    min-height:100vh;
    margin:0;
-   color:#6a6f8c;
-   background:#c8c8c8;
+   color:black;
+   background:white;
    font:600 16px/18px 'Open Sans',sans-serif;
 }
 .flex-fill {
    flex:1 1 auto;
 }
+
 #wrapper {overflow-x: hidden;}
  .navbar {
    margin-bottom: 0;
@@ -23,15 +24,22 @@ body, .sticky-footer-wrapper {
  footer {
    background-color: #555;
    color: white;
-   padding: 15px;
-   bottom:0px;
-   min-width: 100%;
-   max-width: 100%;
-   position: relative;
+   position: fixed;
+   height: 60px;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   vertical-align: middle;
+   line-height: 60px;
  }
  @media screen and (max-width: 767px) {
    .sidenav {height: auto; padding: 15px;}
    .row.content {height:auto;}
+ }
+
+ .well{
+   background-color:#afafae;
+   border:4px solid black;
  }
 /*Star rating*/
 input[type="radio"]{
@@ -47,7 +55,7 @@ input[type="radio"]::after{
 input[type="radio"]:invalid::after{color:#ccc;}
 .rating:hover input[type="radio"]:hover ~ input[type="radio"]:invalid::after, .rating input[type="radio"]:focus ~ input[type="radio"]:invalid::after{color:#ccc;}
 .rating input[type="radio"]:valid{color:orange;}
-.rating input[type="radio"]:checked ~ input[type="radio"]:not(:checked)::after{content:'\2606';color:#ccc;}
+.rating input[type="radio"]:checked ~ input[type="radio"]:not(:checked)::after{content:'\2606';color:gray;}
 
 /*Registration and login*/
 *,:after,:before{box-sizing:border-box;}
@@ -167,10 +175,99 @@ a{color:inherit;text-decoration:none;}
   height: auto;
 }
 
+<<<<<<< HEAD
 /*Support Page*/
 .hidden{
   display:none;
 }
 .onclick{
   cursor:pointer;
+=======
+
+/*Chat Roulette*/
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+}
+#chatr{
+  text-align: center;
+}
+
+/*Chat Roulette*/
+/* Chat containers */
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+>>>>>>> 2c16e9988852d50186181d805af41148349661ba
 }
