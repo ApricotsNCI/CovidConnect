@@ -169,8 +169,8 @@ a{color:inherit;text-decoration:none;}
 
 /*Support Page*/
 .hidden{
-  display: none;
+  display:none;
 }
-.clickable{
-  cursor: pointer;
+.onclick{
+  cursor:pointer;
 }
