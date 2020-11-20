@@ -11,8 +11,7 @@ function processDetails() {
       if(data==false){
         alert("Error: Password or Username invalid, please try again.");
       }else{
-        username = data;
-        location.replace("Webpages/home.html");
+        username = data;        
         document.getElementById("usernameDis").innerHTML="Welcome "+username+"!";
       }
     },
