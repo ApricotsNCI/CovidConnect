@@ -14,7 +14,8 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO users (username,password,Email)values($username,$passwordOne,$email)";
+$sql = "INSERT INTO users (username,password,Email)
+VALUES('$username','$passwordOne','$email')";
 
 if ($conn->query($sql) === TRUE) {
   echo "The account had been created successfully!";
