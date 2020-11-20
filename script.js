@@ -13,6 +13,7 @@ function processDetails() {
       }else{
         username = data;
         location.replace("Webpages/home.html");
+        document.getElementById("usernameDis").innerHTML="Welcome "+username+"!";
       }
     },
     cache: false
