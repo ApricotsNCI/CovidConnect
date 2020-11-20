@@ -22,7 +22,7 @@ $active = $row['active'];
 $count = mysqli_num_rows($result);
 
 if($count == 1) {
-         echo "Login successful! Welcome ".$username."!";
+         echo $username;
 				 function redirect($url){
 					 ob_start();
 					 header('Location: '.$url);
@@ -30,7 +30,6 @@ if($count == 1) {
 					 die();
 				 }
       }else {
-         echo "Your Login Name or Password is invalid ";
+         echo false;
 }
-
 ?>

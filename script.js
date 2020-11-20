@@ -1,3 +1,4 @@
+var username;
 function processDetails() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
@@ -7,7 +8,12 @@ function processDetails() {
     data: { username: username, password: password },
     async: false,
     success: function (data) {
-      alert(data);
+      if(data==false){
+        alert("Error: Password or Username invalid, please try again.");
+      }else{
+        username = data;
+        location.replace("Webpages/home.html");
+      }
     },
     cache: false
   });
