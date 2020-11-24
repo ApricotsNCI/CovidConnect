@@ -22,7 +22,7 @@ if ($conn->query($sql) === TRUE) {
   array_push($arr,$row['gender']);
   array_push($arr,$row['email']);
   array_push($arr,$row['password']);
-  echo $arr;
+  echo json_encode($arr);
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
