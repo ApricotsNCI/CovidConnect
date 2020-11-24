@@ -1,4 +1,3 @@
-var username;
 function processDetails() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
@@ -11,10 +10,8 @@ function processDetails() {
       if(data==false){
         alert("Error: Password or Username invalid, please try again.");
       }else{
-        username = "Welcome "+data+"!";
+        localStorage.setItem("username", data);
         location.replace("Webpages/home.html");
-        var header = document.getElementById("usernameDis");
-        header.appendChild(username);
       }
     },
     cache: false
@@ -49,4 +46,9 @@ function createUser(){
       }
     }
   }
+}
+
+function displayUser(){
+  var username = localStorage.getItem("username");
+  document.getElementById("usernameDis").innerHTML = "Welcome "+username+"!";
 }
