@@ -66,11 +66,11 @@ function displaySettings(){
     async: false,
     success: function(data){
       var details = data;
-      document.getElementById("fullName").value = details[0];
-      document.getElementById("dob").value = details[1];
-      document.getElementById("gender").value = details[2];
-      document.getElementById("email").value = details[3];
-      document.getElementById("password").value = details[4];
+      document.getElementById("fullName").innerHTML += details[0];
+      document.getElementById("dob").innerHTML += details[1];
+      document.getElementById("gender").innerHTML += details[2];
+      document.getElementById("email").innerHTML += details[3];
+      document.getElementById("password").innerHTML += details[4];
     },
     cache:false
   });
