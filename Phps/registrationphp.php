@@ -22,7 +22,7 @@ $active = $row['active'];
 $count = mysqli_num_rows($result);
 
 if($count == 1) {
-   	echo "Error the username is already taken please create an different username.";
+   	echo "Error: the username is already taken please create an different username.";
 }else {
 	$sqlTwo = "INSERT INTO users (username,password,Email)
 	VALUES('$username','$passwordOne','$email')";

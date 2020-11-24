@@ -50,5 +50,5 @@ function createUser(){
 
 function displayUser(){
   var username = localStorage.getItem("username");
-  document.getElementById("usernameDis").innerHTML = "Welcome "+username+"!";
+  document.getElementById("usernameDis").innerHTML += username;
 }
