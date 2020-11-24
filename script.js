@@ -11,9 +11,10 @@ function processDetails() {
       if(data==false){
         alert("Error: Password or Username invalid, please try again.");
       }else{
-        username = data;
+        username = "Welcome "+data+"!";
         location.replace("Webpages/home.html");
-        document.getElementById("usernameDis").innerHTML="Welcome "+username+"!";
+        var header = document.getElementById("usernameDis");
+        header.appendChild(username);
       }
     },
     cache: false
