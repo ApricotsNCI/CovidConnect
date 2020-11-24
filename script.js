@@ -48,7 +48,30 @@ function createUser(){
   }
 }
 
+function updateUser(){
+
+}
+
 function displayUser(){
   var username = localStorage.getItem("username");
   document.getElementById("usernameDis").innerHTML += username;
+}
+
+function displaySettings(){
+  var username = localStorage.getItem("username");
+  $.ajax({
+    url: 'Phps/viewSettingsphp.php',
+    type: 'POST',
+    data: {username:username},
+    async: false,
+    success: function(data){
+      var details = data;
+      document.getElementById("fullName").value = details[0];
+      document.getElementById("dob").value = details[1];
+      document.getElementById("gender").value = details[2];
+      document.getElementById("email").value = details[3];
+      document.getElementById("password").value = details[4];
+    },
+    cache:false
+  });
 }

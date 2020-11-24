@@ -9,7 +9,7 @@
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
      <link href="../style.css" rel="stylesheet">
    </head>
-    <body>
+    <body onload="displaySettings()">
       <!-- Navigation -->
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -57,15 +57,15 @@
            <h2>Personal Info</h2>
            <hr>
            <h3>Full Name</h3>
-           <input type="text" class="input" value="Jane Doe">
+           <input id="fullName" type="text" class="input">
            <h3>Birthday</h3>
-           <input type="text" class="input" value="20th April 1999">
+           <input id="dob" type="text" class="input">
            <h3>Gender</h3>
-           <input type="text" class="input" value="Female">
+           <input id="gender" type="text" class="input">
            <h3>Email</h3>
-           <input type="text" class="input" value="example@example.ie">
+           <input id="email" type="text" class="input">
            <h3>Password</h3>
-           <input type="password" class="input" value="password">
+           <input id="password" type="password" class="input">
            <br>
            <button class="btn" style="margin-bottom:20%;">Update</button>
          </div>
