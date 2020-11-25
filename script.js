@@ -65,11 +65,12 @@ function displaySettings(){
     data: {username:username},
     async: false,
     success: function(data){
-      document.getElementById("fullName").innerHTML += data[0];
-      document.getElementById("dob").innerHTML += data[1];
-      document.getElementById("gender").innerHTML += data[2];
-      document.getElementById("email").innerHTML += data[3];
-      document.getElementById("password").innerHTML += data[4];
+      var dataTwo = JSON.parse(data);
+      document.getElementById("fullName").innerHTML += dataTwo[0];
+      document.getElementById("dob").innerHTML += dataTwo[1];
+      document.getElementById("gender").innerHTML += dataTwo[2];
+      document.getElementById("email").innerHTML += dataTwo[3];
+      document.getElementById("password").innerHTML += dataTwo[4];
     },
     cache:false
   });
