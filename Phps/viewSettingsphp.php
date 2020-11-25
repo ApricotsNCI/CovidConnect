@@ -6,7 +6,8 @@ $db = "heroku_ee0928b4ad437e0";
 
 $conn = new mysqli($server, $user, $pass, $db);
 
-$username = mysqli_real_escape_string($conn,$_POST['username']);
+/*$username = mysqli_real_escape_string($conn,$_POST['username']);*/
+$username = "testuser";
 
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
