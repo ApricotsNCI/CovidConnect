@@ -65,6 +65,7 @@ function displaySettings(){
     data: {username:username},
     async: false,
     success: function(data){
+      alert("This is the data"+data);
       var dataTwo = JSON.parse(data);
       document.getElementById("fullName").innerHTML += dataTwo[0];
       document.getElementById("dob").innerHTML += dataTwo[1];
