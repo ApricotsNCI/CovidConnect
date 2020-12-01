@@ -8,6 +8,8 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
      <link href="../style.css" rel="stylesheet">
+     <script src="vendor/jquery/jquery.min.js"></script>
+     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
    </head>
     <body onload="displaySettings()">
       <!-- Navigation -->
@@ -67,53 +69,10 @@
            <h3 id="password">Password: </h3>
            <input type="password" class="input">
            <br>
-           <button class="btn" style="margin-bottom:20%;">Update</button>
+           <button class="btn" style="margin-bottom:20%;" onclick="displaySettings()">Test</button>
          </div>
        </div>
      </div>
-     <script>
-     $(function() {
-
- var newHash      = "",
-     $mainContent = $("#main-content"),
-     $pageWrap    = $("#page-wrap"),
-     baseHeight   = 0,
-     $el;
-
- $pageWrap.height($pageWrap.height());
- baseHeight = $pageWrap.height() - $mainContent.height();
-
- $("nav").delegate("a", "click", function() {
-     window.location.hash = $(this).attr("href");
-     return false;
- });
-
- $(window).bind('hashchange', function(){
-
-     newHash = window.location.hash.substring(1);
-
-     if (newHash) {
-         $mainContent
-             .find("#guts")
-             .fadeOut(200, function() {
-                 $mainContent.hide().load(newHash + " #guts", function() {
-                     $mainContent.fadeIn(200, function() {
-                         $pageWrap.animate({
-                             height: baseHeight + $mainContent.height() + "px"
-                         });
-                     });
-                     $("nav a").removeClass("current");
-                     $("nav a[href='"+newHash+"']").addClass("current");
-                 });
-             });
-     };
-
- });
-
- $(window).trigger('hashchange');
-
-});
-     </script>
      <footer class="container-fluid text-center">
        <p>Covid Connect Footer</p>
      </footer>
