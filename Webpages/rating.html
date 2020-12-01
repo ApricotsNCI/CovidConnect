@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Ratings Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="../style.css" rel="stylesheet">
-  </head>
 
-  <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="home.html">Covid Connect</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="Profile.HTML">Profile</a></li>
-            <li><a href="chatroulette.html">Chat Roulette</a></li>
-            <li><a href="Connections.html">Connections</a></li>
-            <li><a href="connectionafterchat.html">Connection after chat</a></li>
-            <li><a href="rating.html">Rating</a></li>
-            <li><a href="individualchat.html">Individual Chat</a></li>
-            <li><a href="supportpage.html">Support Page</a></li>
-            <li><a href="supportchat.html">Support Chat</a></li>
-            <li><a href="settings.html">Settings</a></li>
-          </ul>
-        </div>
+<head>
+  <title>Ratings Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="../style.css" rel="stylesheet">
+  <script src="../script.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Covid Connect</a>
       </div>
-    </nav>
-    <div class="container-fluid text-center">
-      <div class="row content">
-        <div class="col-sm-12 text-center" style="padding:0px;">
-          <h1 style="text-decoration:underline; font-weight:bold;">Rate your chat!</h1>
-          <p>Please rate your conversation.</p>
-          <button>Rate Now!</button>
-          <button>Skip Rating</button>
-          <form action="">
-            <fieldset>
-              <div class="rating">
-                <input type="radio" name="rating" value="1" aria-label="1 star">
-                <input type="radio" name="rating" value="2" aria-label="2 star">
-                <input type="radio" name="rating" value="3" aria-label="3 star">
-                <input type="radio" name="rating" value="4" aria-label="4 star">
-                <input type="radio" name="rating" value="5" aria-label="5 star">
-              </div>
-            </fieldset>
-          </form>
-          <div class="well" style="margin-left:1%; width:20%; height:20%; margin-bottom:2%; float:left;">
-            <img src="../Imgs/PfpPlaceholder.png" width="80%" height="80%"></img>
-            <h3>You</h3>
-          </div>
-          <div class="well" style="margin-right:1%; width:20%; height:20%; margin-bottom:2%; float:right;">
-            <img src="../Imgs/PfpPlaceholder.png" width="80%" height="80%"></img>
-            <h3>Other User</h3>
-          </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Profile.HTML">Profile</a></li>
+          <li><a href="chatroulette.html">Chat Roulette</a></li>
+          <li><a href="Connections.html">Connections</a></li>
+          <li><a href="connectionafterchat.html">Connection after chat</a></li>
+          <li><a href="rating.html">Rating</a></li>
+          <li><a href="individualchat.html">Individual Chat</a></li>
+          <li><a href="supportpage.html">Support Page</a></li>
+          <li><a href="supportchat.html">Support Chat</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-12 text-center" style="padding:0px;">
+        <h1 style="text-decoration:underline; font-weight:bold;">Rate your chat!</h1>
+        <p>Please rate your conversation.</p>
+        <button>Rate Now!</button>
+        <button>Skip Rating</button>
+        <form action="">
+          <fieldset>
+            <div class="rating">
+              <input type="radio" name="rating" value="1" aria-label="1 star">
+              <input type="radio" name="rating" value="2" aria-label="2 star">
+              <input type="radio" name="rating" value="3" aria-label="3 star">
+              <input type="radio" name="rating" value="4" aria-label="4 star">
+              <input type="radio" name="rating" value="5" aria-label="5 star">
+            </div>
+          </fieldset>
+        </form>
+        <div class="well" style="margin-left:1%; width:20%; height:20%; margin-bottom:2%; float:left;">
+          <img src="../Imgs/PfpPlaceholder.png" width="80%" height="80%"></img>
+          <h3>You</h3>
+        </div>
+        <div class="well" style="margin-right:1%; width:20%; height:20%; margin-bottom:2%; float:right;">
+          <img src="../Imgs/PfpPlaceholder.png" width="80%" height="80%"></img>
+          <h3>Other User</h3>
+        </div>
       </div>
       <footer class="container-fluid text-center">
         <p>Covid Connect Footer</p>
       </footer>
     </div>
 
-  </body>
+</body>
+
 </html>

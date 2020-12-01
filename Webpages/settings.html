@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Settings Page</title>
-    <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <link href="../style.css" rel="stylesheet">
-   </head>
-    <body onload="displaySettings()">
-      <!-- Navigation -->
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="home.html">Covid Connect</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="Profile.HTML">Profile</a></li>
-              <li><a href="chatroulette.html">Chat Roulette</a></li>
-              <li><a href="Connections.html">Connections</a></li>
-              <li><a href="connectionafterchat.html">Connection after chat</a></li>
-              <li><a href="rating.html">Rating</a></li>
-              <li><a href="individualchat.html">Individual Chat</a></li>
-              <li><a href="supportpage.html">Support Page</a></li>
-              <li><a href="supportchat.html">Support Chat</a></li>
-              <li><a href="settings.html">Settings</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-     <div class="container-fluid">
-       <div class="row content" style="text-align:center;">
-          <div class="container">
-            <h3>Account Settings</h3>
-            <hr>
-            <h4>Username</h4>
-            <input type="text" class="input" value="JaneDoe123">
-            <h4>Full Name</h4>
-            <input type="text" class="input" value="Jane Doe">
-            <h4>Email</h4>
-            <input type="text" class="input" value="example@example.ie">
-            <br>
-          </div>
-          <div class="settingsContainer">
-           <h4>Date of Birth</h4>
-           <input type="text" class="input" value="20th April 1999">
-           <h4>Gender</h4>
-           <input type="radio" name="gender" value="male"> Male
-           <input type="radio" name="gender" value="female"> Female
-            <br>
-           <hr>
-           <h3>You can update your password here!</h3>
-           <h4>Password</h4>
-           <input type="password" class="input" value="password">
-           <h4>Confirm new password</h4>
-           <input type="password" class="input" value="">
-           <br>
-           <button class="btn" style="margin-bottom:20%;">Update</button>
-           <hr>
-           <h3>Deleting your account is permanent. This account cannot be undone.</h3>
-           <button class="btn" style="margin-bottom:20%; color: red;">Permanently Delete Account</button>
-         </div>
+
+<head>
+  <title>Settings Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../script.js"></script>
+  <link href="../style.css" rel="stylesheet">
+</head>
+
+<body onload="displaySettings()" style="background-image: url('../bgsettings.png');">
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Covid Connect</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Profile.HTML">Profile</a></li>
+          <li><a href="chatroulette.html">Chat Roulette</a></li>
+          <li><a href="Connections.html">Connections</a></li>
+          <li><a href="connectionafterchat.html">Connection after chat</a></li>
+          <li><a href="rating.html">Rating</a></li>
+          <li><a href="individualchat.html">Individual Chat</a></li>
+          <li><a href="supportpage.html">Support Page</a></li>
+          <li><a href="supportchat.html">Support Chat</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
       </div>
     </div>
-     <footer class="container-fluid text-center">
-       <p>Covid Connect Footer</p>
-     </footer>
-     <script src="../script.js"></script>
-   </body>
+  </nav>
+  <div class="container-fluid">
+    <div class="row content" style="text-align:center;">
+      <h3>Account Settings</h3>
+      <div class="container">
+        <h4>Personal Information</h4>
+        <hr>
+        <h4>Username: <input type="text" class="input" value="JaneDoe123"></h4>
+        <h4>Full Name: <input type="text" class="input" value="Jane Doe"></h4>
+        <h4>Email: <input type="text" class="input" value="example@example.ie"></h4>
+        <h5>Profile Picture:<form action="upload.php" method="post"><input type="file" name="file" id="file"/></form></h5>
+        <br>
+        <button class="btn">Update</button>
+      </div>
+      <div class="container">
+        <h4>Other Information</h4>
+        <hr>
+        <h4>Date of Birth: <input type="text" class="input" value="20th April 1999"></h4>
+        <h4>Gender:
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+        </h4>
+        <br>
+        <button class="btn">Update</button>
+      </div>
+      <div class="container">
+        <h4>Password Protection</h4>
+        <hr>
+        <h3>You can update your password here!</h3>
+        <h4>Password: <input type="password" class="input" value="password"></h4>
+        <h4>Confirm new password: <input type="password" class="input" value=""></h4>
+        <br>
+        <button class="btn">Update</button>
+      </div>
+      <div class="container">
+        <h4>Account Deletion</h4>
+        <hr>
+        <h3>Deleting your account is permanent. This account cannot be undone.</h3>
+        <button class="btn" style="background-color:red;">Permanently Delete Account</button>
+      </div>
+    </div>
+  </div>
+  <footer class="container-fluid text-center">
+    <p>Covid Connect Footer</p>
+  </footer>
+</body>
+
 </html>

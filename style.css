@@ -297,16 +297,12 @@ footer {
 
 
 /*Settings Page*/
-
-
 .container {
-  height: auto;
-  max-width: 50%;
-  margin: 25px auto;
+  height: 60%;
+  max-width: 40%;
+  margin: 20px auto;
   background-color: #D3D3D3;
 }
-.settingsContainer{
-  height: auto;
-  max-width: 50%;
-  margin: 25px auto;
+.btn{
+  margin-bottom:20%;
 }
