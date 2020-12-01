@@ -6,7 +6,6 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
      <link href="../style.css" rel="stylesheet">
    </head>
     <body onload="displaySettings()">
@@ -35,20 +34,11 @@
      <div class="container-fluid">
        <div class="row content">
          <div class="col-sm-3 sidenav">
-           <h3><a href"settings.html">Settings</a></h3>
+           <h3 style="text-align:center;"><a href="settings.html">Settings</a></h3>
            <br>
            <ul class="nav nav-pills nav-stacked">
-             <div cnotifications.htmllass="input-group">
-               <input type="text" class="form-control" placeholder="Search Settings..">
-               <span class="input-group-btn">
-                 <button class="btn btn-default" type="button">
-                   <span class="glyphicon glyphicon-search"></span>
-                 </button>
-               </span>
-             </div>
-             <li><a href="settings.html">Personal Information</a></li>
+             <li class="active"><a href="settings.html">Account Settings</a></li>
              <li><a href="privacy.html">Privacy Settings</a></li>
-             <li><a href="billing.html">Billing Settings</a></li>
              <li><a href="notifications.html">Notifications Settings</a></li>
            </ul><br>
          </div>
@@ -66,54 +56,13 @@
            <input type="text" class="input" value="example@example.ie">
            <h3>Password</h3>
            <input type="password" class="input" value="password">
-           <br>
+           <br></br>
            <button class="btn" style="margin-bottom:20%;">Update</button>
+           <br></br>
+           <button class="btn" style="margin-bottom:20%; color: red;">Permanently Delete Account</button>
          </div>
        </div>
      </div>
-     <script>
-     $(function() {
-
- var newHash      = "",
-     $mainContent = $("#main-content"),
-     $pageWrap    = $("#page-wrap"),
-     baseHeight   = 0,
-     $el;
-
- $pageWrap.height($pageWrap.height());
- baseHeight = $pageWrap.height() - $mainContent.height();
-
- $("nav").delegate("a", "click", function() {
-     window.location.hash = $(this).attr("href");
-     return false;
- });
-
- $(window).bind('hashchange', function(){
-
-     newHash = window.location.hash.substring(1);
-
-     if (newHash) {
-         $mainContent
-             .find("#guts")
-             .fadeOut(200, function() {
-                 $mainContent.hide().load(newHash + " #guts", function() {
-                     $mainContent.fadeIn(200, function() {
-                         $pageWrap.animate({
-                             height: baseHeight + $mainContent.height() + "px"
-                         });
-                     });
-                     $("nav a").removeClass("current");
-                     $("nav a[href='"+newHash+"']").addClass("current");
-                 });
-             });
-     };
-
- });
-
- $(window).trigger('hashchange');
-
-});
-     </script>
      <footer class="container-fluid text-center">
        <p>Covid Connect Footer</p>
      </footer>
