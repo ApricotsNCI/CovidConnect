@@ -32,37 +32,39 @@
         </div>
       </nav>
      <div class="container-fluid">
-       <div class="row content">
-         <div class="col-sm-3 sidenav">
-           <h3 style="text-align:center;"><a href="settings.html">Settings</a></h3>
-           <br>
-           <ul class="nav nav-pills nav-stacked">
-             <li class="active"><a href="settings.html">Account Settings</a></li>
-             <li><a href="privacy.html">Privacy Settings</a></li>
-             <li><a href="notifications.html">Notifications Settings</a></li>
-           </ul><br>
-         </div>
-         <div class="col-sm-9">
-           <h1>Settings</h1>
-           <h2>Personal Info</h2>
-           <hr>
-           <h3>Full Name</h3>
-           <input type="text" class="input" value="Jane Doe">
-           <h3>Birthday</h3>
+       <div class="row content" style="text-align:center;">
+          <div class="container">
+            <h3>Account Settings</h3>
+            <hr>
+            <h4>Username</h4>
+            <input type="text" class="input" value="JaneDoe123">
+            <h4>Full Name</h4>
+            <input type="text" class="input" value="Jane Doe">
+            <h4>Email</h4>
+            <input type="text" class="input" value="example@example.ie">
+            <br>
+          </div>
+          <div class="settingsContainer">
+           <h4>Date of Birth</h4>
            <input type="text" class="input" value="20th April 1999">
-           <h3>Gender</h3>
-           <input type="text" class="input" value="Female">
-           <h3>Email</h3>
-           <input type="text" class="input" value="example@example.ie">
-           <h3>Password</h3>
+           <h4>Gender</h4>
+           <input type="radio" name="gender" value="male"> Male
+           <input type="radio" name="gender" value="female"> Female
+            <br>
+           <hr>
+           <h3>You can update your password here!</h3>
+           <h4>Password</h4>
            <input type="password" class="input" value="password">
-           <br></br>
+           <h4>Confirm new password</h4>
+           <input type="password" class="input" value="">
+           <br>
            <button class="btn" style="margin-bottom:20%;">Update</button>
-           <br></br>
+           <hr>
+           <h3>Deleting your account is permanent. This account cannot be undone.</h3>
            <button class="btn" style="margin-bottom:20%; color: red;">Permanently Delete Account</button>
          </div>
-       </div>
-     </div>
+      </div>
+    </div>
      <footer class="container-fluid text-center">
        <p>Covid Connect Footer</p>
      </footer>
