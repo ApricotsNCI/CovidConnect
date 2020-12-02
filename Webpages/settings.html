@@ -38,9 +38,9 @@
       <div class="settingscontainer">
         <h4>Personal Information</h4>
         <hr>
-        <h5>Username: <input type="text" class="input" value="JaneDoe123"></h5>
-        <h5>Full Name: <input type="text" class="input" value="Jane Doe"></h5>
-        <h5>Email: <input type="text" class="input" value="example@example.ie"></h5>
+        <h5>Username: <input type="text" id="username" class="input"></h5>
+        <h5>Full Name: <input type="text" id="fullName" class="input"></h5>
+        <h5>Email: <input type="text" id="email" class="input"></h5>
         <h5>
           <form action="upload.php" method="post">Profile Picture:<input type="file" name="file" id="file" /></form>
         </h5>
@@ -50,10 +50,9 @@
       <div class="settingscontainer">
         <h4>Other Information</h4>
         <hr>
-        <h5>Date of Birth: <input type="text" class="input" value="20th April 1999"></h5>
+        <h5>Date of Birth: <input type="text" id="dob" class="input"></h5>
         <h5>Gender:
-          <input type="radio" name="gender" value="male"> Male
-          <input type="radio" name="gender" value="female"> Female
+          <input type="text" id="gender" class="input"></h5>
         </h5>
         <br>
         <button class="btn">Update</button>
@@ -62,7 +61,7 @@
         <h4>Password Protection</h4>
         <hr>
         <h5>You can update your password here!</h5>
-        <h5>Password: <input type="password" class="input" value="password"></h5>
+        <h5>Password: <input type="password" id="password" class="input"></h5>
         <h5>Confirm new password: <input type="password" class="input" value=""></h5>
         <br>
         <button class="btn">Update</button>
