@@ -43,7 +43,16 @@
           <hr>
           <img src="../Imgs/PfpPlaceholder.png" width="60%" height="60%"></img>
           <h4>Name</h4>
+          <button class="open-button" onclick="openForm()">Chat Now</button>
+          <div class="chat-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
           <button style="">Chat Now!</button>
+          <label for="msg"><b>Message</b></label>
+          <textarea placeholder="Type message.." name="msg" required></textarea>
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+         </form>
+        </div>
         </div>
         <div class="col-sm-3 text-center">
           <hr>
@@ -93,6 +102,10 @@
         </div>
       </div>
     </div>
+
+     <footer class="container-fluid text-center">
+       <p>Covid Connect Footer</p>
+    </footer>
 
 </body>
 
