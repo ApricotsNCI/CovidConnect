@@ -64,8 +64,10 @@ function displaySettings(){
     type: 'POST',
     data: {username:username},
     async: false,
-    success: function(data){      
+    success: function(data){
+      alert(data);
       var arr = JSON.parse(data);
+      document.getElementById("username").value = username;
       document.getElementById("fullName").value = arr[0];
       document.getElementById("dob").value = arr[1];
       document.getElementById("gender").value = arr[2];
