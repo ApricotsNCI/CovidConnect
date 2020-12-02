@@ -1,98 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Support Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="../style.css" rel="stylesheet">
 
-  </head>
+<head>
+  <title>Support Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="../style.css" rel="stylesheet">
+  <script src="../script.js"></script>
+</head>
 
-  <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="home.html">Covid Connect</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="Profile.HTML">Profile</a></li>
-            <li><a href="chatroulette.html">Chat Roulette</a></li>
-            <li><a href="Connections.html">Connections</a></li>
-            <li><a href="connectionafterchat.html">Connection after chat</a></li>
-            <li><a href="rating.html">Rating</a></li>
-            <li><a href="individualchat.html">Individual Chat</a></li>
-            <li><a href="supportpage.html">Support Page</a></li>
-            <li><a href="supportchat.html">Support Chat</a></li>
-            <li><a href="settings.html">Settings</a></li>
-          </ul>
-        </div>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Covid Connect</a>
       </div>
-    </nav>
-    <div class="container-fluid text-center">
-      <div class="row content">
-        <div class="col-sm-2 sidenav">
-          <p><a href="#">Link</a></p>
-          <p><a href="#">Link</a></p>
-          <p><a href="#">Link</a></p>
-        </div>
-        <div class="col-sm-8 text-center">
-          <h1>Support Page</h1>
-          <hr>
-          <h2 onclick="displayText()"=> We're Here to Help!</h2>
-          <div id="targetDiv"></div>
-          <script type="text/javascript">
-            function displayText(){
-              document.getElementById("targetDiv").innerHTML = "Browse Our Help Topics!";
-            }
-          </script>
-
-        </div>
-
-        <div class="col-sm-2 sidenav">
-          <div class="well">
-            <p>ADS</p>
-          </div>
-          <div class="well">
-            <p>ADS</p>
-          </div>
-        </div>
-
-  <div id="wrapper">
-			<div id="two">
-				<div id="midleft">
-          <p>CovidConnect Support Box</p>
-				</div>
-				<div id="midright">
-					<div class="side">
-            <p>Settings</p>
-          </div>
-					<div class="side">
-            <p>Your Account</p>
-          </div>
-					<div class="side">
-            <p>Support Chat</p>
-          </div>
-					<div class="side">
-            <p>Safety</p>
-          </div>
-				</div>
-			</div>
-
-			</div>
-
-        </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Profile.HTML">Profile</a></li>
+          <li><a href="chatroulette.html">Chat Roulette</a></li>
+          <li><a href="Connections.html">Connections</a></li>
+          <li><a href="individualchat.html">Individual Chat</a></li>
+          <li><a href="supportpage.html">Support Page</a></li>
+          <li><a href="supportchat.html">Support Chat</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
       </div>
     </div>
-    <footer class="container-fluid text-center">
-      <p>Covid Connect Footer</p>
+  </nav>
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <p><a href="#">Link</a></p>
+        <p><a href="#">Link</a></p>
+        <p><a href="#">Link</a></p>
+      </div>
+      <div class="col-sm-8 text-center">
+        <h1>Support Page</h1>
+        <hr>
+        <h2 onclick="displayText()"=> We're Here to Help!</h2>
+        <div id="targetDiv"></div>
+        <script type="text/javascript">
+          function displayText() {
+            document.getElementById("targetDiv").innerHTML = "Browse Our Help Topics!";
+          }
+        </script>
 
-    </footer>
+      </div>
+
+      <div class="col-sm-2 sidenav">
+        <div class="well">
+          <p>ADS</p>
+        </div>
+        <div class="well">
+          <p>ADS</p>
+        </div>
+      </div>
+
+      <div id="wrapper">
+        <div id="two">
+          <div id="midleft">
+            <p>CovidConnect Support Box</p>
+          </div>
+          <div id="midright">
+            <div class="side">
+              <p>Settings</p>
+            </div>
+            <div class="side">
+              <p>Your Account</p>
+            </div>
+            <div class="side">
+              <p>Support Chat</p>
+            </div>
+            <div class="side">
+              <p>Safety</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <footer class="container-fluid text-center">
+    <p>Covid Connect Footer</p>
+
+  </footer>
 
 </body>
 

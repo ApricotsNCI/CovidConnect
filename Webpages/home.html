@@ -1,117 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="../style.css" rel="stylesheet">
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body onload="displayUser()">
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="home.html">Covid Connect</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="Profile.HTML">Profile</a></li>
-            <li><a href="chatroulette.html">Chat Roulette</a></li>
-            <li><a href="Connections.html">Connections</a></li>
-            <li><a href="connectionafterchat.html">Connection after chat</a></li>
-            <li><a href="rating.html">Rating</a></li>
-            <li><a href="individualchat.html">Individual Chat</a></li>
-            <li><a href="supportpage.html">Support Page</a></li>
-            <li><a href="supportchat.html">Support Chat</a></li>
-            <li><a href="settings.html">Settings</a></li>
-          </ul>
-        </div>
+
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="../style.css" rel="stylesheet">
+  <script src="../script.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body onload="displayUser()">
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Covid Connect</a>
       </div>
-    </nav>
-    <!-- Header -->
-    <header class="bg-primary py-5 mb-5">
-      <img id="homepagebanner" src="../bg.jpg" alt="Background">
-    </header>
-    <!-- Page Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mb-5">
-          <h1 id="usernameDis">Welcome </h1>
-          <h2>What is Covid Connect?</h2>
-          <hr>
-          <p>Covid Connnect is on online web application that allows you to contact other people who are in quarintine!</p>
-        </div>
-        <div class="col-md-4 mb-5">
-          <h2>Contact Us</h2>
-          <hr>
-          <address>
-            <strong>CovidConnect</strong>
-            <br>Mayor Street Lower
-            <br>IFSC
-            <br>Dublin
-            <br>
-          </address>
-          <address>
-            <abbr title="Phone">P:</abbr>
-            (086) 216 3521
-            <br>
-            <abbr title="Email">E:</abbr>
-            <a href="mailto:#">convidconnect@convidconnect.com</a>
-          </address>
-        </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Profile.HTML">Profile</a></li>
+          <li><a href="chatroulette.html">Chat Roulette</a></li>
+          <li><a href="Connections.html">Connections</a></li>
+          <li><a href="individualchat.html">Individual Chat</a></li>
+          <li><a href="supportpage.html">Support Page</a></li>
+          <li><a href="supportchat.html">Support Chat</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
       </div>
-      <!-- /.row -->
-      <div class="row">
-        <div class="col-md-4 mb-5">
-          <div class="card h-100">
-            <img class="card-img-top" src="../chat.png" alt="Chat Logo">
-            <div class="card-body">
-              <h4 class="card-title">Chat!</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
-            </div>
-            <div class="card-footer">
-              <a href="individualchat.html" class="btn btn-primary">Start Now!</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-5">
-          <div class="card h-100">
-            <img class="card-img-top" src="../chatroulette.png" alt="chatroulette Logo">
-            <div class="card-body">
-              <h4 class="card-title">Chat Roulette!</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
-            </div>
-            <div class="card-footer">
-              <a href="chatroulette.html" class="btn btn-primary">Start Now!</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-5">
-          <div class="card h-100">
-            <img class="card-img-top" src="../connect.png" alt="Chat Logo">
-            <div class="card-body">
-              <h4 class="card-title">Connect Now</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="connections.html" class="btn btn-primary">Start Now!</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.row -->
     </div>
-    <!-- /.container -->
-    <!-- Footer -->
-    <footer class="container-fluid text-center">
-      <p>Covid Connect Footer</p>
-    </footer>
-    <script src="../script.js"></script>
-  </body>
+  </nav>
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <img id="homepagebanner" src="../bg.jpg" alt="Background">
+  </header>
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h1 id="usernameDis">Welcome </h1>
+        <h2>What is Covid Connect?</h2>
+        <hr>
+        <p>Covid Connnect is on online web application that allows you to contact other people who are in quarintine!</p>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Contact Us</h2>
+        <hr>
+        <address>
+          <strong>CovidConnect</strong>
+          <br>Mayor Street Lower
+          <br>IFSC
+          <br>Dublin
+          <br>
+        </address>
+        <address>
+          <abbr title="Phone">P:</abbr>
+          (086) 216 3521
+          <br>
+          <abbr title="Email">E:</abbr>
+          <a href="mailto:#">convidconnect@convidconnect.com</a>
+        </address>
+      </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="../chat.png" alt="Chat Logo">
+          <div class="card-body">
+            <h4 class="card-title">Chat!</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+          </div>
+          <div class="card-footer">
+            <a href="individualchat.html" class="btn btn-primary">Start Now!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="../chatroulette.png" alt="chatroulette Logo">
+          <div class="card-body">
+            <h4 class="card-title">Chat Roulette!</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+          </div>
+          <div class="card-footer">
+            <a href="chatroulette.html" class="btn btn-primary">Start Now!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="../connect.png" alt="Chat Logo">
+          <div class="card-body">
+            <h4 class="card-title">Connect Now</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          </div>
+          <div class="card-footer">
+            <a href="connections.html" class="btn btn-primary">Start Now!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <!-- Footer -->
+  <footer class="container-fluid text-center">
+    <p>Covid Connect Footer</p>
+  </footer>
+</body>
+
 </html>

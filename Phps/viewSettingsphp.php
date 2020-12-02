@@ -18,12 +18,26 @@ if ($conn->connect_error) {
 
 $arr = array();
 
-$sql = "SELECT fullName, dob, gender, Email, password FROM users WHERE username='$username'";
+$sql = "SELECT * FROM users WHERE username='$username'";
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-if ($conn->query($sql) === TRUE) {
-  array_push($arr,$row['fullName']);
-  array_push($arr,$row['dob']);
-  array_push($arr,$row['gender']);
+if ($result == TRUE) {
+	if($row['fullName']==""){
+		array_push($arr,"No name found!");
+	}else{
+		array_push($arr,$row['fullName']);
+	}
+  if($row['dob']==""){
+		array_push($arr,"No birthday found!");
+	}else{
+		array_push($arr,$row['dob']);
+	}
+	if($row['gender']==""){
+		array_push($arr,"No gender found!");
+	}else{
+		array_push($arr,$row['gender']);
+	}
   array_push($arr,$row['Email']);
   array_push($arr,$row['password']);
   echo json_encode($arr);

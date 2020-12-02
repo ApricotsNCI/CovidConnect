@@ -64,13 +64,32 @@ function displaySettings(){
     type: 'POST',
     data: {username:username},
     async: false,
+    success: function(data){      
+      var arr = JSON.parse(data);
+      document.getElementById("fullName").value = arr[0];
+      document.getElementById("dob").value = arr[1];
+      document.getElementById("gender").value = arr[2];
+      document.getElementById("email").value = arr[3];
+      document.getElementById("password").value = arr[4];
+    },
+    cache:false
+  });
+}
+
+function updateSettings(){
+  var username = localStorage.getItem("username");
+  var fullName = document.getElementById("fullName").value;
+  var dob = document.getElementById("dob").value;
+  var gender = document.getElementById("gender").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  $.ajax({
+    url: '../Phps/updateSettingsphp.php',
+    type: 'POST',
+    data: {username:username, fullName:fullName, dob:dob, gender:gender, email:email, password:password},
+    async: false,
     success: function(data){
-      alert(data);    
-      document.getElementById("fullName").innerHTML += data[0];
-      document.getElementById("dob").innerHTML += data[1];
-      document.getElementById("gender").innerHTML += data[2];
-      document.getElementById("email").innerHTML += data[3];
-      document.getElementById("password").innerHTML += data[4];
+      alert(data);
     },
     cache:false
   });
