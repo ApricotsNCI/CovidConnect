@@ -9,6 +9,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="../style.css" rel="stylesheet">
   <script src="../script.js"></script>
+  <script defer scr="http://localhost:3000/socket.io/socket.io.js"></script>
+
 
 </head>
 
@@ -27,7 +29,6 @@
           <li><a href="Connections.html">Connections</a></li>
           <li><a href="individualchat.html">Individual Chat</a></li>
           <li><a href="supportpage.html">Support Page</a></li>
-          <li><a href="supportchat.html">Support Chat</a></li>
           <li><a href="settings.html">Settings</a></li>
         </ul>
       </div>
@@ -42,7 +43,6 @@
         <p><a href="#">Luke Kavanagh</a></p>
         <p><a href="#">Oisin Hogan</a></p>
         <p><a href="#">Sean Hallahan</a></p>
-        <p><a href="#">Jane Doe</a></p>
         <p><a href="#">Michael Murphy</a></p>
         <p><a href="#">Karen O'Brien</a></p>
         <p><a href="#">James Deegan</a></p>
@@ -52,31 +52,17 @@
 
       </div>
       <div class="col-sm-8 text-left">
-        <h1 id="chatr">Chatroulette</h1>
-        <div class="container">
-          <img src="../user1.png" alt="Avatar">
-          <p>Hello. How are you today?</p>
-          <span class="time-right">11:00</span>
-        </div>
 
-        <div class="container darker">
-          <img src="../user2.jpg" alt="Avatar" class="right">
-          <p>Hey! I'm fine. Thanks for asking!</p>
-          <span class="time-left">11:01</span>
-        </div>
 
-        <div class="container">
-          <img src="../user1.png" alt="Avatar">
-          <p>Sweet! So, what do you wanna do today?</p>
-          <span class="time-right">11:02</span>
-        </div>
+        <div id="message-container">
+          <form id="send-container">
+            <input type="text" id="message-input">
+              <button type="submit" id="send-button">Send</button>
+          </form>
 
-        <div class="container darker">
-          <img src="../user2.jpg" alt="Avatar" class="right">
-          <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-          <span class="time-left">11:05</span>
         </div>
       </div>
+
       <div class="col-sm-2 sidenav">
         <div class="well">
           <p><a href="rating.html">Rate your Chat!</a></p>
