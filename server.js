@@ -1,17 +1,18 @@
-const io = require('socket.io')('https://covid-connect-heroku.herokuapp.com/Webpages/chatroulette.html')
+//Creating exxpress instances
+var express = require("express");
+var app = express();
 
-const users = {}
+//creating http instances
+var http = require("http").createServer(app);
 
-io.on('connection', socket => {
-  socket.on('new-user', name => {
-    users[socket.id] = name
-    socket.broadcast.emit('user-connected', name)
-  })
-  socket.on('send-chat-message', message => {
-    socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] })
-  })
-  socket.on('disconnect', () => {
-    socket.broadcast.emit('user-disconnected', users[socket.id])
-    delete users[socket.id]
-  })
-})
+//Creating socket.io instances
+var io = require("socket.io")(http);
+
+io.on("connection", function(socket){
+  console.log("User connected", socket.id);
+});
+
+//start the createServer
+http.listen(3000, function(){
+  console.log("Server started");
+});
