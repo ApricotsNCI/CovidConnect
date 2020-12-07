@@ -9,12 +9,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="../style.css" rel="stylesheet">
   <script src="../script.js"></script>
-  <script>
-  (function(t,a,l,k,j,s){
-    s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.head.appendChild(s);
-    k=t.Promise;t.Talk={v:1,ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l
-    .push([f])},catch:function(){return k&&new k()},c:l}};})(window,document,[]);
-  </script>
   <style>
     /* Set black background color, white text and some padding */
     footer {
@@ -171,14 +165,36 @@
       <i>Loading chat...</i>
   </div>
 
-  <footer class="container-fluid text-center">
-    <p>Footer Text</p>
-  </footer>
+  <script>
+  await Talk.ready;
+  const me = new Talk.User({
+      id: "123456",
+      name: "Alice",
+      email: "alice@example.com",
+      photoUrl: "https://demo.talkjs.com/img/alice.jpg",
+      welcomeMessage: "Hey there! How are you? :-)"
+  });
+  const session = new Talk.Session({
+      appId: "t5aSe1De",
+      me: me
+  });
+  <?php $user = $database.getUser(654321); ?>
+  var other = new Talk.User(
+      <?php echo json_encode(array(
+          "id" => strval($user->id),
+          "name" => $user->name,
+          "email" => $user->email,
+          "photoUrl" => $user->photoUrl,
+          "welcomeMessage" => "Hey, let's have a chat!"
+      )); ?>
+  );
+  const conversation = session.getOrCreateConversation(Talk.oneOnOneId(me, other));
+conversation.setParticipant(me);
+conversation.setParticipant(other);
 
-</body>
-
-</html>
-
+const inbox = session.createInbox({selected: conversation});
+inbox.mount(document.getElementById("talkjs-container"));
+  </script>
 </body>
 
 </html>
