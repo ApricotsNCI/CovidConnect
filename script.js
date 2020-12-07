@@ -65,7 +65,6 @@ function displaySettings(){
     data: {username:username},
     async: false,
     success: function(data){
-      alert(data);
       var arr = JSON.parse(data);
       document.getElementById("username").value = username;
       document.getElementById("fullName").value = arr[0];
@@ -95,4 +94,24 @@ function updateSettings(){
     },
     cache:false
   });
+}
+
+function deleteUser(){
+  var username = localStorage.getItem("username");
+  var confirmation = confirm("Are you sure you wish to delete "+username+"?");
+  if(confirmation==true){
+    $.ajax({
+      url: '../Phps/deleteUserphp.php',
+      type: 'POST',
+      data: {username:username},
+      async: false,
+      success: function(data){
+          alert(data);
+            location.replace("../index.html");
+      },
+      cache:false
+    });
+  }else{
+    alert("Proccess cancelled!");
+  }
 }
