@@ -1,0 +1,29 @@
+{
+  "name": "covidconnect",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ApricotsNCI/CovidConnect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ApricotsNCI/CovidConnect/issues"
+  },
+  "homepage": "https://github.com/ApricotsNCI/CovidConnect#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "jquery": "^3.5.1",
+    "socket.io": "^3.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "description": ""
+}
