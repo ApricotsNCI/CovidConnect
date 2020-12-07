@@ -87,6 +87,7 @@ function closeForm() {
 }
 
 /*Individual chat*/
+const Talk = require('talkjs');
 
 Talk.ready.then(function() {
     var me = new Talk.User({

@@ -20,7 +20,8 @@
     "express": "^4.17.1",
     "http": "0.0.1-security",
     "jquery": "^3.5.1",
-    "socket.io": "^3.0.4"
+    "socket.io": "^3.0.4",
+    "talkjs": "^0.14.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
