@@ -9,29 +9,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="../style.css" rel="stylesheet">
   <script src="../script.js"></script>
-</head>
-
-<body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="home.html">Covid Connect</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="Profile.HTML">Profile</a></li>
-          <li><a href="chatroulette.html">Chat Roulette</a></li>
-          <li><a href="Connections.html">Connections</a></li>
-          <li><a href="individualchat.html">Individual Chat</a></li>
-          <li><a href="supportpage.html">Support Page</a></li>
-          <li><a href="settings.html">Settings</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <!-- minified snippet to load TalkJS without delaying your page -->
   <script>
     (function(t, a, l, k, j, s) {
@@ -57,43 +34,64 @@
         }
       };
     })(window, document, []);
-    await Talk.ready;
-    const me = new Talk.User({
-      id: "123456",
-      name: "Alice",
-      email: "alice@example.com",
-      photoUrl: "https://demo.talkjs.com/img/alice.jpg",
-      welcomeMessage: "Hey there! How are you? :-)"
-    });
-    const session = new Talk.Session({
-      appId: "t5aSe1De",
-      me: me
-    }); <
-    ? php $user = $database.getUser(654321); ? >
-    var other = new Talk.User( <
-      ? php echo json_encode(array(
-        "id" => strval($user - > id),
-        "name" => $user - > name,
-        "email" => $user - > email,
-        "photoUrl" => $user - > photoUrl,
-        "welcomeMessage" => "Hey, let's have a chat!"
-      )); ? >
-    );
-    const conversation = session.getOrCreateConversation(Talk.oneOnOneId(me, other));
-    conversation.setParticipant(me);
-    conversation.setParticipant(other);
-
-    const inbox = session.createInbox({
-      selected: conversation
-    });
-    inbox.mount(document.getElementById("talkjs-container"));
   </script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Covid Connect</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Profile.HTML">Profile</a></li>
+          <li><a href="chatroulette.html">Chat Roulette</a></li>
+          <li><a href="Connections.html">Connections</a></li>
+          <li><a href="individualchat.html">Individual Chat</a></li>
+          <li><a href="supportpage.html">Support Page</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- container element in which TalkJS will display a chat UI -->
   <div id="talkjs-container" style="width: 90%; margin: 30px; height: 500px">
     <i>Loading chat...</i>
-</div>
+    <script>
+      await Talk.ready;
+      const me = new Talk.User({
+        id: "123456",
+        name: "Alice",
+        email: "alice@example.com",
+        photoUrl: "https://demo.talkjs.com/img/alice.jpg",
+        welcomeMessage: "Hey there! How are you? :-)"
+      });
+      const session = new Talk.Session({
+        appId: "t5aSe1De",
+        me: me
+      });
+      const other = new Talk.User({
+        id: "654321",
+        name: "Sebastian",
+        email: "Sebastian@example.com",
+        photoUrl: "https://demo.talkjs.com/img/sebastian.jpg",
+        welcomeMessage: "Hey, how can I help?"
+      });
 
+      const conversation = session.getOrCreateConversation(Talk.oneOnOneId(me, other));
+      conversation.setParticipant(me);
+      conversation.setParticipant(other);
+
+      const inbox = session.createInbox({
+        selected: conversation
+      });
+      inbox.mount(document.getElementById("talkjs-container"));
+    </script>
+  </div>
 </body>
 
 </html>
