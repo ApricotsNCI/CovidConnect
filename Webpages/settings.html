@@ -17,7 +17,7 @@
   </script>
 </head>
 
-<body onload="displaySettings()" style="background-image: url('../bgsettings.png');">
+<body onload="displaySettings()">
   <!-- Navigation -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -29,9 +29,8 @@
           <li><a href="home.html">Home</a></li>
           <li><a href="Profile.HTML">Profile</a></li>
           <li><a href="chatroulette.html">Chat Roulette</a></li>
-          <li><a href="Connections.html">Connections</a></li>
           <li><a href="individualchat.html">Individual Chat</a></li>
-          <li><a href="supportpage.html">Support Page</a></li>
+          <li><a href="supportpage.html">Support</a></li>
           <li><a href="settings.html">Settings</a></li>
         </ul>
       </div>
@@ -47,15 +46,22 @@
         <h5>Full Name: <input type="text" id="fullName" class="input"></h5>
         <h5>Email: <input type="text" id="email" class="input"></h5>
         <h5>Upload profile image: </h5>
-          <input type="file" name="file" id="file">        
+          <input type="file" name="file" id="file">
         <br>
       </div>
-      <div class="settingscontainer">
+      <div class="settingscontainer1">
         <h4>Other Information</h4>
         <hr>
         <h5>Date of Birth: <input type="text" id="dob" class="input"></h5>
         <h5>Gender:
-          <input type="text" id="gender" class="input"></h5>
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+          <br>
+          <label for="w3review">Personal Bio:</label>
+          <br>
+          <textarea id="w3review" name="w3review" rows="4" cols="50">
+            Please enter a few sentences about yourself.
+          </textarea>
         </h5>
         <br>
       </div>

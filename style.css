@@ -4,6 +4,7 @@ body, .sticky-footer-wrapper {
   color: black;
   background: white;
   font: 600 16px/18px 'Open Sans', sans-serif;
+  background-color: #ffff99;
 }
 .flex-fill {
   flex: 1 1 auto;
@@ -96,7 +97,7 @@ a {
   max-width: 525px;
   min-height: 670px;
   position: relative;
-  background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
+  background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) center;
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 .login-html {
@@ -220,20 +221,24 @@ a {
 }
 
 /*Home page*/
-.homepagebanner {
-  width: 100%;
-  height: auto;
+#homepagebanner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  float: inherit;
 }
 
-/*ChatRoulette*/
-/* Chat containers */
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+  border-radius: 15px;
+  padding-top: 5%;
+  margin: 0 auto;
 }
+
+/*ChatRoulette*/
+
 /* Darker chat container */
 .darker {
   border-color: #ccc;
@@ -314,6 +319,12 @@ a {
 /*Settings Page*/
 .settingscontainer {
   height: 45%;
+  max-width: 45%;
+  margin: 20px auto;
+  background-color: #D3D3D3;
+}
+.settingscontainer1 {
+  height: 55%;
   max-width: 45%;
   margin: 20px auto;
   background-color: #D3D3D3;
