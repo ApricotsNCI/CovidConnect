@@ -228,15 +228,24 @@ a {
   width: 40%;
   float: inherit;
 }
-
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
-  border-radius: 15px;
-  padding-top: 5%;
+  border-radius: 10px;
   margin: 0 auto;
+  margin-bottom: 7%;
 }
-
+.homerow{
+float: left;
+width: 30%;
+height: 20%;
+text-align: center;
+border: 3px solid #a9a9a9;
+background-color: #f1f1f1;
+border-radius: 10px;
+margin: 0 auto;
+margin-bottom: 5%;
+}
 /*ChatRoulette*/
 
 /* Darker chat container */
@@ -408,4 +417,9 @@ a {
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+/* Heading on Support Page */
+h1 {
+    text-align: center;
+    font-family: verdana;
 }
