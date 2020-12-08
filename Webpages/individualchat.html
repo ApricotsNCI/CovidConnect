@@ -8,6 +8,35 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="../style.css" rel="stylesheet">
+<script>
+  Talk.ready.then(function() {
+      var me = new Talk.User({
+          id: "123456",
+          name: "Alice",
+          email: "alice@example.com",
+          photoUrl: "https://demo.talkjs.com/img/alice.jpg",
+          welcomeMessage: "Hey there! How are you? :-)"
+      });
+      window.talkSession = new Talk.Session({
+          appId: "YOUR_APP_ID",
+          me: me
+      });
+      var other = new Talk.User({
+          id: "654321",
+          name: "Sebastian",
+          email: "Sebastian@example.com",
+          photoUrl: "https://demo.talkjs.com/img/sebastian.jpg",
+          welcomeMessage: "Hey, how can I help?"
+      });
+
+      var conversation = talkSession.getOrCreateConversation(Talk.oneOnOneId(me, other))
+      conversation.setParticipant(me);
+      conversation.setParticipant(other);
+
+      var inbox = talkSession.createInbox({selected: conversation});
+      inbox.mount(document.getElementById("talkjs-container"));
+  });
+  </script>
   <script src="../script.js"></script>
   <style>
     /* Set black background color, white text and some padding */
@@ -164,39 +193,7 @@
   <div id="talkjs-container" style="width: 90%; margin: 30px; height: 500px">
       <i>Loading chat...</i>
   </div>
-<!>
-comment
-</!>
-  <script>
-  await Talk.ready;
-  const me = new Talk.User({
-      id: "123456",
-      name: "Alice",
-      email: "alice@example.com",
-      photoUrl: "https://demo.talkjs.com/img/alice.jpg",
-      welcomeMessage: "Hey there! How are you? :-)"
-  });
-  const session = new Talk.Session({
-      appId: "t5aSe1De",
-      me: me
-  });
-  <?php $user = $database.getUser(654321); ?>
-  var other = new Talk.User(
-      <?php echo json_encode(array(
-          "id" => strval($user->id),
-          "name" => $user->name,
-          "email" => $user->email,
-          "photoUrl" => $user->photoUrl,
-          "welcomeMessage" => "Hey, let's have a chat!"
-      )); ?>
-  );
-  const conversation = session.getOrCreateConversation(Talk.oneOnOneId(me, other));
-conversation.setParticipant(me);
-conversation.setParticipant(other);
 
-const inbox = session.createInbox({selected: conversation});
-inbox.mount(document.getElementById("talkjs-container"));
-  </script>
 </body>
 
 </html>
