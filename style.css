@@ -45,13 +45,13 @@ footer {
     height: auto;
   }
 }
-.col {
+.well {
   background-color: #afafae;
-  border: 4px solid black;
+  border: 3px solid black;
 }
-.col-5{
+.well1{
   background-color: #afafae;
-  border: 4px solid black;
+  border: 3px solid black;
 
 }
 
