@@ -4,6 +4,7 @@ body, .sticky-footer-wrapper {
   color: black;
   background: white;
   font: 600 16px/18px 'Open Sans', sans-serif;
+  background-color: #ffff99;
 }
 .flex-fill {
   flex: 1 1 auto;
