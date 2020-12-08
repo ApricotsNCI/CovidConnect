@@ -410,3 +410,8 @@ a {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+/* Heading on Support Page */
+h1 {
+    text-align: center; 
+    font-family: verdana;
+}
