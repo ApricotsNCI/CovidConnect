@@ -225,8 +225,7 @@ a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
-  height: 20%;
+  width: 40%;
   float: inherit;
 }
 
@@ -412,6 +411,6 @@ a {
 }
 /* Heading on Support Page */
 h1 {
-    text-align: center; 
+    text-align: center;
     font-family: verdana;
 }
