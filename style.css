@@ -48,10 +48,14 @@ footer {
 .well {
   background-color: #afafae;
   border: 3px solid black;
+  width:20%;
+  height:60%;
 }
 .well1{
   background-color: #afafae;
   border: 3px solid black;
+  width:30%;
+  height:60%;
 
 }
 
