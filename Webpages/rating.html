@@ -31,40 +31,50 @@
       </div>
     </div>
   </nav>
+  <!-- Header -->
+  <header>
+    <img id="homepagebanner" src="../Imgs/bgrating.jpg" alt="Background">
+  </header>
   <div class="container-fluid text-center">
     <div class="row content">
-      <div class="col-sm-12 text-center" style="padding:0px;">
-        <h1 style="text-decoration:underline; font-weight:bold;">Rate your chat!</h1>
-        <p>Please rate your conversation.</p>
-        <form action="">
-          <fieldset>
-            <div class="rating">
-              <input type="radio" name="rating" value="1" aria-label="1 star">
-              <input type="radio" name="rating" value="2" aria-label="2 star">
-              <input type="radio" name="rating" value="3" aria-label="3 star">
-              <input type="radio" name="rating" value="4" aria-label="4 star">
-              <input type="radio" name="rating" value="5" aria-label="5 star">
-            </div>
-          </fieldset>
-        </form>
-        <button>Rate</button>
-        <p>Would you like to connect with this user?</p>
-        <button>Connect Now!</button>
-        <button>Skip</button>
-        <div class="well" style="margin-left:1%; width:20%; height:20%; margin-bottom:2%; float:left;">
+
+
+        <div class="col" style="margin-left:1%; width:18%; height:60%; margin-bottom:2%; float:left;">
           <img src="../Imgs/PfpPlaceholder.png" width="80%" height="80%"></img>
           <h3>You</h3>
         </div>
-        <div class="well" style="margin-right:1%; width:20%; height:20%; margin-bottom:2%; float:right;">
+
+        <div class="col-5" style="margin: 0 auto; width:30%; height:60%; margin-bottom:2%; float:inherit;">
+          <p>Please rate your conversation!</p>
+          <form action="">
+            <fieldset>
+              <div class="rating">
+                <input type="radio" name="rating" value="1" aria-label="1 star">
+                <input type="radio" name="rating" value="2" aria-label="2 star">
+                <input type="radio" name="rating" value="3" aria-label="3 star">
+                <input type="radio" name="rating" value="4" aria-label="4 star">
+                <input type="radio" name="rating" value="5" aria-label="5 star">
+              </div>
+            </fieldset>
+          </form>
+          <button>Rate</button>
+          <p>Would you like to connect with this user?</p>
+          <button>Connect Now!</button>
+          <button type="submit" id="send-button"><a href="chatroulette.html">Next</a></button>
+        </div>
+
+
+
+        <div class="col" style="margin-right:1%; width:18%; height:60%; margin-bottom:2%; float:right;">
           <img src="../Imgs/PfpPlaceholder.png" width="80%" height="80%"></img>
           <h3>Other User</h3>
         </div>
+
       </div>
       <footer class="container-fluid text-center">
         <p>Covid Connect Footer</p>
       </footer>
     </div>
-
 </body>
 
 </html>
