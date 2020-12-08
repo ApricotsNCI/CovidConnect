@@ -116,3 +116,11 @@ Talk.ready.then(function() {
     var inbox = talkSession.createInbox({selected: conversation});
     inbox.mount(document.getElementById("talkjs-container"));
 });
+/*Connections*/
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+});
