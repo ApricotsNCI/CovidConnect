@@ -106,7 +106,7 @@ a {
   max-width: 525px;
   min-height: 670px;
   position: relative;
-  background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) center;
+  background: url(Imgs/bglogin.jpg) center;
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 .login-html {
