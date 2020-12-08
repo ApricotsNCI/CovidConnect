@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link href="../style.css" rel="stylesheet">
   <script src="../script.js"></script>
+  <link href="../style.css" rel="stylesheet">
 </head>
 
-<body onload="displayUser()">
+<body onload="displayUserProfile()">
   <!-- Navigation -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -38,8 +38,8 @@
         <div class="well" style="margin-left:10%; width:80%; height:80%; margin-bottom:2%; float:center;">
           <h1 id="usernameDis"></h1>
           <img src="../Imgs/PfpPlaceholder.png" width="60%" height="60%"></img>
-          <h4>Name</h4>
-          <h4>Age</h4>
+          <h4 id="name">Name:</h4>
+          <h4 id="dob">Birthday:</h4>
         </div>
       </div>
       <div class="col-md-8 mb-5 text-left">

@@ -80,6 +80,7 @@ function updateSettings(){
   var gender = document.getElementById("gender").value;
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
+
   $.ajax({
     url: '../Phps/updateSettingsphp.php',
     type: 'POST',
@@ -111,3 +112,20 @@ function deleteUser(){
     alert("Proccess cancelled!");
   }
 }
+
+function displayUserProfile(){
+  var username = localStorage.getItem("username");
+  $.ajax({
+    url: '../Phps/profileViewphp.php',
+    type: 'POST',
+    data: {username:username},
+    async: false,
+    success: function(data){
+      var arr = JSON.parse(data);
+      document.getElementById("usernameDis").innerHTML = username;
+      document.getElementById("name").innerHTML = arr[0];
+      document.getElementById("dob").innerHTML = arr[1];
+    },
+    cache:false
+    });
+  }
