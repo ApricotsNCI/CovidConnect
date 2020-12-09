@@ -1,5 +1,5 @@
 <?php
-$server = "eu-cdbr-west-03.cleardb.ne";
+$server = "eu-cdbr-west-03.cleardb.net";
 $user = "b66c12d2a6df51";
 $pass = "42536d71";
 
