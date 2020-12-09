@@ -1,27 +1,42 @@
 html, body {
+  background-color: #ffff99;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  color: black;
+  background: white;
+  font: 600 16px/18px 'Open Sans', sans-serif;
+}
+
+#homepagebanner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  float: inherit;
 }
 
 img, video {
-  max-width: 100%;
+  max-width: 60%;
+}
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
 }
 
 textarea {
   width: 100%;
 }
 
-.height-fill { 
-  min-height: 100%;
-  height: 100%;
+.height-fill {
+  height: 90%;
 }
 
 .pos-top {
   position: fixed;
   margin: 0;
-  height: 65px;
+  height: 10%;
   top: 5px;
   left: 0;
   right: 0;
@@ -43,4 +58,15 @@ textarea {
 
 .shortcut {
   display: block;
+}
+#messgae-container{
+  width: 80%;
+  max-width:2000px;
+}
+#message-container div{
+  background-color: #CCC;
+  padding: 5px;
+}
+#message-container div:nth-child(2n){
+  background-color: #fff;
 }
