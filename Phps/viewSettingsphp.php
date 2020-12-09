@@ -40,6 +40,11 @@ if ($result == TRUE) {
 	}
   array_push($arr,$row['Email']);
   array_push($arr,$row['password']);
+	if($row['user_bio']==""){
+		array_push($arr,"Please enter a few sentences about yourself.");
+	}else{
+		array_push($arr,$row['user_bio']);
+	}
   echo json_encode($arr);
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;

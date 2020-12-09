@@ -15,12 +15,13 @@ $dob = mysqli_real_escape_string($conn,$_POST['dob']);
 $gender = mysqli_real_escape_string($conn,$_POST['gender']);
 $email =  mysqli_real_escape_string($conn,$_POST['email']);
 $password = mysqli_real_escape_string($conn,$_POST['password']);
+$bio = mysqli_real_escape_string($conn,$_POST['bio']);
 
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE users SET fullName='$fullName', dob='$dob', gender='$gender', email='$email', password='$password' WHERE username='$username'";
+$sql = "UPDATE users SET fullName='$fullName', dob='$dob', gender='$gender', email='$email', password='$password', user_bio='$bio' WHERE username='$username'";
 
 if ($conn->query($sql) === TRUE) {
   echo "The account had been updated successfully!";

@@ -68,6 +68,7 @@ function displaySettings(){
       document.getElementById("gender").value = arr[2];
       document.getElementById("email").value = arr[3];
       document.getElementById("password").value = arr[4];
+      document.getElementById("bio").innerHTML = arr[5];
     },
     cache:false
   });
@@ -80,11 +81,11 @@ function updateSettings(){
   var gender = document.getElementById("gender").value;
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
-
+  var bio = document.getElementById("bio").value;
   $.ajax({
     url: '../Phps/updateSettingsphp.php',
     type: 'POST',
-    data: {username:username, fullName:fullName, dob:dob, gender:gender, email:email, password:password},
+    data: {username:username, fullName:fullName, dob:dob, gender:gender, email:email, password:password, bio:bio},
     async: false,
     success: function(data){
       alert(data);
@@ -125,6 +126,7 @@ function displayUserProfile(){
       document.getElementById("usernameDis").innerHTML = username;
       document.getElementById("name").innerHTML = arr[0];
       document.getElementById("dob").innerHTML = arr[1];
+      document.getElementById("bio").innerHTML = arr[2];
     },
     cache:false
     });

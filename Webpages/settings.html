@@ -54,13 +54,15 @@
         <hr>
         <h5>Date of Birth: <input type="text" id="dob" class="input"></h5>
         <h5>Gender:
-          <input type="radio" name="gender" value="male"> Male
-          <input type="radio" name="gender" value="female"> Female
+          <select name="Genders" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
           <br>
-          <label for="w3review">Personal Bio:</label>
+          <label for="bio">Personal Bio:</label>
           <br>
-          <textarea id="w3review" name="w3review" rows="4" cols="50">
-            Please enter a few sentences about yourself.
+          <textarea id="bio" name="w3review" rows="4" cols="50">            
           </textarea>
         </h5>
         <br>

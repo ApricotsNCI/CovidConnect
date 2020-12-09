@@ -33,6 +33,11 @@ if ($result == TRUE) {
 	}else{
 		array_push($arr,$row['dob']);
 	}
+	if($row['user_bio']==""){
+		array_push($arr,"User has no bio!");
+	}else{
+		array_push($arr,$row['user_bio']);
+	}
   echo json_encode($arr);
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
