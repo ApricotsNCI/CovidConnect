@@ -9,6 +9,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="../style.css" rel="stylesheet">
   <script src="../script.js"></script>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <!-- Bootstrap -->
+  <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <link href="../app.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -45,9 +53,63 @@
           </form>
         </div>
       </div>
-      <button type="submit" id="send-button"><a href="rating.html">Next</a></button>
-      <br><br>
-      <iframe src='http://www.meetingroulette.com/sourcecode/iframe.asp?code=2894661691&codcountry=IE&codstate=&idcity=0&mode=text&color=f2f2f2' width='900' height='570' frameborder='0'></iframe>
+    </div>
+  </div>
+
+  <button type="submit" id="send-button"><a href="rating.html">Next</a></button>
+  <br><br>
+  <div class="container-fluid height-fill">
+    <div class="row height-fill pos-middle">
+      <div id="video_container" class="col-xs-2">
+        <video poster="../Imgs/cam.png" id="selfVideo"> </video>
+        <video poster="../Imgs//cam.png" id="partnerVideo"> </video>
+      </div>
+
+      <div id="messages_container" class="col-xs-6 well height-fill">
+      </div>
+
+      <div id="user_container" class="col-xs-2 well height-fill">
+      </div>
+
+      <div id="button_container" class="col-xs-2">
+        <a class="btn btn-block btn-success" id="next_btn" title="Get a Random Stranger">
+          <i class="fa fa-forward fa-3x"></i>
+          <span class="shortcut">Next</span>
+        </a>
+        <a class="btn btn-block btn-danger" id="stop_btn" title="Stop The Chat">
+          <i class="fa fa-stop fa-3x"></i>
+          <span class="shortcut">Stop</span>
+        </a>
+        <a class="btn btn-block btn-warning" id="clear_btn" title="Clear Chatbox">
+          <i class="fa fa-eraser fa-3x"></i>
+          <span class="shortcut">Clear</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="row pos-bottom">
+      <div class="col-xs-7 col-xs-offset-2">
+        <textarea id="message" rows="3" name="message"> </textarea>
+      </div>
+      <div class="col-xs-1">
+        <a class="btn btn-block btn-success btn-large disabled" id="send_btn">
+          <i class="fa fa-envelope fa-2x"></i>
+          <span class="shortcut">(Enter)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../jquery/jquery-1.11.3.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="../node_module/socket.io/socket.io.js"></script>
+  <script src="../node_module/easyrtc/easyrtc.js"></script>
+  <script src="../app.js"></script>
+
+
 </body>
 
 </html>
