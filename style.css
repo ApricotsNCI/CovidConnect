@@ -1,3 +1,4 @@
+/*All Pages*/
 body, .sticky-footer-wrapper {
   min-height: 100vh;
   margin: 0;
@@ -24,13 +25,6 @@ body, .sticky-footer-wrapper {
   height: 450px;
 }
 
-/* Set gray background color and 100% height */
-.sidenav {
-  padding-top: 20px;
-  background-color: #f1f1f1;
-  height: 100%;
-}
-
 footer {
   background-color: #555;
   color: white;
@@ -54,6 +48,7 @@ footer {
   }
 }
 
+/*Home Page*/
 .well {
   background-color: #afafae;
   border: 3px solid black;
@@ -68,8 +63,36 @@ footer {
   height: 60%;
 }
 
+#homepagebanner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  float: inherit;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 7%;
+}
+
+.homerow {
+  float: left;
+  width: 30%;
+  height: 20%;
+  text-align: center;
+  border: 3px solid #a9a9a9;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
 /*Rating Page*/
-input[type="radio"] {
+settingsinput[type="radio"] {
   -webkit-appearance: none;
   box-shadow: none;
   outline: none;
@@ -272,35 +295,6 @@ a {
   text-align: center;
 }
 
-/*Home page*/
-#homepagebanner {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-  float: inherit;
-}
-
-.container {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  margin: 0 auto;
-  margin-bottom: 7%;
-}
-
-.homerow {
-  float: left;
-  width: 30%;
-  height: 20%;
-  text-align: center;
-  border: 3px solid #a9a9a9;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  margin: 0 auto;
-  margin-bottom: 5%;
-}
-
 /*ChatRoulette*/
 #messgae-container {
   width: 80%;
@@ -317,6 +311,11 @@ a {
 }
 
 /* SupportPage Div styles */
+h1 {
+  text-align: center;
+  font-family: verdana;
+}
+
 #wrapper {
   width: 100%;
   height: 1500px;
@@ -349,13 +348,11 @@ a {
   margin-bottom: 3.3%;
   width: 100%;
 }
+
 /*Support page Contact section */
 input[type=text], select, textarea {
-  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
   resize: vertical;
 }
 
@@ -369,13 +366,6 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #45a049;
-}
-
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
 }
 
 /* Create two columns that float next to eachother */
@@ -403,25 +393,25 @@ input[type=submit]:hover {
 
 /*Settings Page*/
 .settingscontainer {
-  height: 45%;
-  max-width: 45%;
+  height: 90%;
+  max-width: 40%;
   margin: 20px auto;
   background-color: #D3D3D3;
 }
 
 .settingscontainer1 {
-  height: 55%;
-  max-width: 45%;
+  height: 50%;
+  max-width: 40%;
   margin: 20px auto;
   background-color: #D3D3D3;
 }
 
 .settingscontainer2 {
-  height: 45%;
-  max-width: 45%;
+  height: 40%;
+  max-width: 40%;
   margin: 20px auto;
   background-color: #D3D3D3;
-  margin-bottom: 7%;
+  margin-bottom: 10%;
 }
 
 .btn {
@@ -508,9 +498,12 @@ input[type=submit]:hover {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+<<<<<<< HEAD
 
 /* Headings on Support Page */
 h2 {
   text-align: center;
   font-family: verdana;
 }
+=======
+>>>>>>> be99aad0b580e76d80313f51d92f761bd08cda7c

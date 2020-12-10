@@ -36,17 +36,15 @@
   <div class="container-fluid">
     <div class="row content" style="text-align:center;">
       <div class="settingscontainer">
-        <h4>Personal Information</h4>
+        <h4 style="padding-top: 3%;">Personal Information</h4>
         <hr>
         <h5>Username: <input type="text" id="username" class="input"></h5>
         <h5>Full Name: <input type="text" id="fullName" class="input"></h5>
         <h5>Email: <input type="text" id="email" class="input"></h5>
-        <h5>Upload profile image: </h5>
-        <input type="file" name="file" id="file">
         <br>
       </div>
-      <div class="settingscontainer1">
-        <h4>Other Information</h4>
+      <div class="settingscontainer">
+        <h4 style="padding-top: 3%;">Other Information</h4>
         <hr>
         <h5>Date of Birth: <input type="text" id="dob" class="input"></h5>
         <h5>Gender:
@@ -63,8 +61,8 @@
         </h5>
         <br>
       </div>
-      <div class="settingscontainer">
-        <h4>Password Protection</h4>
+      <div class="settingscontainer1">
+        <h4 style="padding-top: 3%;">Password Protection</h4>
         <hr>
         <h5>You can update your password here!</h5>
         <h5>Password: <input type="password" id="password" class="input"></h5>
@@ -73,16 +71,18 @@
         <button onclick="updateSettings()" class="btn">Update</button>
       </div>
       <div class="settingscontainer2">
-        <h4>Account Deletion</h4>
+        <h4 style="padding-top: 3%;">Account Deletion</h4>
         <hr>
         <h4>Deleting your account is permanent. This account cannot be undone.</h4>
         <button onclick="deleteUser()" class="btn" style="background-color:red;">Permanently Delete Account</button>
       </div>
     </div>
   </div>
-  <footer class="container-fluid text-center">
-    <p>Covid Connect Footer</p>
-  </footer>
+
+        <footer class="container-fluid text-center">
+          <p>Covid Connect Footer</p>
+        </footer>
+
 </body>
 
 </html>
