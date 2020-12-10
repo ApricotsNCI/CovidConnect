@@ -11,66 +11,68 @@
   <link href="../style.css" rel="stylesheet">
   <script src="../script.js"></script>
 </head>
+
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="home.html">Covid Connect</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Covid Connect</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Profile.HTML">Profile</a></li>
+          <li><a href="chatroulette.html">Chat Roulette</a></li>
+          <li><a href="individualchat.html">Individual Chat</a></li>
+          <li><a href="supportpage.html">Support</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="Profile.HTML">Profile</a></li>
-        <li><a href="chatroulette.html">Chat Roulette</a></li>
-        <li><a href="individualchat.html">Individual Chat</a></li>
-        <li><a href="supportpage.html">Support</a></li>
-        <li><a href="settings.html">Settings</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- Header -->
-<header>
-  <img id="homepagebanner" src="../Imgs/bgsupport.jpg" alt="Background">
-</header>
-<!-- Page Content -->
+  </nav>
+  <!-- Header -->
+  <header>
+    <img id="homepagebanner" src="../Imgs/bgsupport.jpg" alt="Background">
+  </header>
+  <!-- Page Content -->
   <div class="container-fluid text-center">
-        <h1>Support Page</h1>
-        <hr>
-        <h2 onclick="displayText()"=> We're Here to Help!</h2>
-        <div id="targetDiv"></div>
-        <script type="text/javascript">
-          function displayText() {
-            document.getElementById("targetDiv").innerHTML = "Browse Our Help Topics!";
-          }
-        </script>
+    <h1>Support Page</h1>
+    <hr>
+    <h2 onclick="displayText()"=> We're Here to Help!</h2>
+    <div id="targetDiv"></div>
+    <script type="text/javascript">
+      function displayText() {
+        document.getElementById("targetDiv").innerHTML = "Browse Our Help Topics!";
+      }
+    </script>
 
+  </div>
+
+
+  <div id="wrapper">
+    <div id="two">
+      <div id="midleft">
+        <p>CovidConnect Support Box</p>
       </div>
-
-
-      <div id="wrapper">
-        <div id="two">
-          <div id="midleft">
-            <p>CovidConnect Support Box</p>
-          </div>
-          <div id="midright">
-            <div class="side">
-              <p>Settings, Link to Settings Page</p><li><a href="settings.html">Settings</a></li>
-            </div>
-            <div class="side">
-              <p>Your Account</p>
-            </div>
-            <div class="side">
-              <p>Support Chat</p>
-            </div>
-            <div class="side">
-              <p>Safety</p>
-            </div>
-          </div>
+      <div id="midright">
+        <div class="side">
+          <p>Settings, Link to Settings Page</p>
+          <li><a href="settings.html">Settings</a></li>
         </div>
-
+        <div class="side">
+          <p>Your Account</p>
+        </div>
+        <div class="side">
+          <p>Support Chat</p>
+        </div>
+        <div class="side">
+          <p>Safety</p>
+        </div>
       </div>
+    </div>
+
+  </div>
 
   <footer class="container-fluid text-center">
     <p>Covid Connect Footer</p>

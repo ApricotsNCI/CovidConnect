@@ -9,12 +9,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../script.js"></script>
   <link href="../style.css" rel="stylesheet">
-  <script>
-  (function(t,a,l,k,j,s){
-    s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.head.appendChild(s);
-    k=t.Promise;t.Talk={v:1,ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l
-    .push([f])},catch:function(){return k&&new k()},c:l}};})(window,document,[]);
-  </script>
 </head>
 
 <body onload="displaySettings()">
@@ -48,7 +42,7 @@
         <h5>Full Name: <input type="text" id="fullName" class="input"></h5>
         <h5>Email: <input type="text" id="email" class="input"></h5>
         <h5>Upload profile image: </h5>
-          <input type="file" name="file" id="file">
+        <input type="file" name="file" id="file">
         <br>
       </div>
       <div class="settingscontainer1">
@@ -64,7 +58,7 @@
           <br>
           <label for="bio">Personal Bio:</label>
           <br>
-          <textarea id="bio" name="w3review" rows="4" cols="50">            
+          <textarea id="bio" name="w3review" rows="4" cols="50">
           </textarea>
         </h5>
         <br>
