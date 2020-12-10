@@ -13,6 +13,9 @@ $username = mysqli_real_escape_string($conn,$_POST['username']);
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
+session_start();
 
-
-?>
+if(!isset($_SESSION['user_id']))
+{
+ header("location:login.php");
+}
