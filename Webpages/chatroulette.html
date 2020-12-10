@@ -16,11 +16,10 @@
   <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="../app.css" rel="stylesheet">
-
-      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -46,25 +45,36 @@
   <header>
     <img id="homepagebanner" src="../Imgs/bgchatroulette.jpg" alt="Background">
   </header>
-      <body>
-          <div class="container">
-     <br />
+  <body>
+    <div class="container">
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-mds-8 col-sm-6">
+          <h4>Online User</h4>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <input type="hidden" id="is_active_group_chat_window" value="no" />
+          <button type="button" name="group_chat" id="group_chat" class="btn btn-warning btn-xs">Group Chat</button>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <p align="right">Hi - <?php echo $_SESSION['username']; ?> - <a href="../Phps/logout.php">Logout</a></p>
+        </div>
+      </div>
+      <div class="table-responsive">
 
-     <h3 align="center">Chat Application using PHP Ajax Jquery</a></h3><br />
-     <br />
+        <div id="user_details"></div>
+        <div id="user_model_details"></div>
+      </div>
+      <br>
+      <br>
 
-     <div class="table-responsive">
-      <h4 align="center">Online User</h4>
-      <p align="right">Hi - <?php echo $_SESSION['username'];  ?> - <a href="logout.php">Logout</a></p>
-      <div id="user_details"></div>
-     </div>
     </div>
-      </body>
-  </html>
 
 
 
-  <!-- Page Content>
+
+    <!-- Page Content>
   <div class="container-fluid height-fill" style="margin: auto;">
     <div class="row height-fill pos-middle">
       <div id="video_container" class="col-xs-2">
@@ -108,24 +118,23 @@
 -->
 
 
-<script>
-$(document).ready(function(){
+    <script>
+      $(document).ready(function() {
 
- fetch_user();
+        fetch_user();
 
- function fetch_user()
- {
-  $.ajax({
-   url:"fetch_user.php",
-   method:"POST",
-   success:function(data){
-    $('#user_details').html(data);
-   }
-  })
- }
+        function fetch_user() {
+          $.ajax({
+            url: "../Phps/fetch_user.php",
+            method: "POST",
+            success: function(data) {
+              $('#user_details').html(data);
+            }
+          })
+        }
 
-});
-</script>
-</body>
+      });
+    </script>
+  </body>
 
 </html>
