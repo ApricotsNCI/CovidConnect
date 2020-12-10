@@ -1,24 +1,21 @@
-html, body {
-  background-color: #ffff99;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  color: black;
-  background: white;
-  font: 600 16px/18px 'Open Sans', sans-serif;
-}
+  html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #ffff99;
+  }
 
 #homepagebanner {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 15%;
+  width: 25%;
   float: inherit;
 }
 
 img, video {
-  max-width: 60%;
+  max-width: 100%;
 }
 .navbar {
   margin-bottom: 0;
@@ -30,7 +27,7 @@ textarea {
 }
 
 .height-fill {
-  height: 90%;
+  height: 85%;
 }
 
 .pos-top {
@@ -44,7 +41,7 @@ textarea {
 
 .pos-middle {
   margin: 0;
-  padding: 75px 0 150px 0;
+  padding: 5px 0 150px 0;
 }
 
 .pos-bottom {
