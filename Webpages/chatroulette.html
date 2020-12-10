@@ -16,6 +16,10 @@
   <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="../app.css" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -41,7 +45,37 @@
   <header>
     <img id="homepagebanner" src="../Imgs/bgchatroulette.jpg" alt="Background">
   </header>
-  <!-- Page Content -->
+
+  <body>
+    <div class="container">
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-mds-8 col-sm-6">
+          <h4>Online User</h4>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <input type="hidden" id="is_active_group_chat_window" value="no" />
+          <button type="button" name="group_chat" id="group_chat" class="btn btn-warning btn-xs">Group Chat</button>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <p align="right">Hi - <?php echo $_SESSION['username']; ?> - <a href="../Phps/logout.php">Logout</a></p>
+        </div>
+      </div>
+      <div class="table-responsive">
+
+        <div id="user_details"></div>
+        <div id="user_model_details"></div>
+      </div>
+      <br>
+      <br>
+
+    </div>
+
+
+
+
+    <!-- Page Content>
   <div class="container-fluid height-fill" style="margin: auto;">
     <div class="row height-fill pos-middle">
       <div id="video_container" class="col-xs-2">
@@ -74,14 +108,34 @@
       </div>
     </div>
   </div>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
   <script src="../jquery/jquery-1.11.3.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Include all compiled plugins (below), or include individual files as needed
   <script src="../bootstrap/js/bootstrap.min.js"></script>
   <script src="../node_module/socket.io/lib/socket.io.js"></script>
   <script src="../node_module/easyrtc/api/easyrtc.js"></script>
   <script src="..//app.js"></script>
 
-</body>
+-->
+
+
+    <script>
+      $(document).ready(function() {
+
+        fetch_user();
+
+        function fetch_user() {
+          $.ajax({
+            url: "../Phps/fetch_user.php",
+            method: "POST",
+            success: function(data) {
+              $('#user_details').html(data);
+            }
+          })
+        }
+
+      });
+    </script>
+  </body>
 
 </html>
