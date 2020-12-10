@@ -331,12 +331,12 @@ h1 {
 #midleft {
   background-color: pink;
   width: 70%;
-  height: 100%;
+  height: 103.5%;
   float: left;
 }
 
 #midright {
-  background-color: white;
+  background-color: #ffff99;
   width: 30%;
   height: 100%;
   float: right;
@@ -344,8 +344,8 @@ h1 {
 
 .side {
   background: orange;
-  height: 23.4%;
-  margin-bottom: 3.5%;
+  height: 24%;
+  margin-bottom: 3.3%;
   width: 100%;
 }
 
@@ -385,9 +385,9 @@ input[type=submit]:hover {
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
+.column, input[type=submit] {
+  width: 100%;
+  margin-top: 0;
   }
 }
 
@@ -498,3 +498,12 @@ input[type=submit]:hover {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+<<<<<<< HEAD
+
+/* Headings on Support Page */
+h2 {
+  text-align: center;
+  font-family: verdana;
+}
+=======
+>>>>>>> be99aad0b580e76d80313f51d92f761bd08cda7c
