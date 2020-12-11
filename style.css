@@ -519,7 +519,6 @@ input[type=submit]:hover {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-<<<<<<< HEAD
 
 /* Headings on Support Page */
 h2 {
@@ -531,4 +530,5 @@ h2 {
   width: 100%;
   height: 90%;
   float: center;
+  margin-bottom: 110px;
 }
