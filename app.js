@@ -18,7 +18,7 @@
       elText.val('');
       // as webRTC allows to send P2P message, send it to the partner
       // without interacting with the server
-      easyrtc.sendPeerMessage(self.partnerId, 'send_peer_msg', text);
+      system.sendPeerMessage(self.partnerId, 'send_peer_msg', text);
       // add message to the user
       addMessage(text, self.id);
     }
@@ -30,13 +30,6 @@
     easyrtc.webSocket.emit('next_user');
   });
 
-  $('#stop_btn').on('click', hangupCall);
-
-  $('#clear_btn').on('click', function() {
-    elMessages.html('');
-  });
-
-
   // handle the key events
   elText.on('keypress', function(e) {
     if (e.keyCode == 13 && !e.shiftKey && !btnSend.hasClass('disabled')) {
@@ -46,7 +39,7 @@
   });
 
   // will be trigerred on sendPeerMessage() call
-  easyrtc.setPeerListener(function(senderId, msgType, msgData, targeting) {
+  system.setPeerListener(function(senderId, msgType, msgData, targeting) {
     if (msgType === 'send_peer_msg') {
       addMessage(msgData, senderId);
     } else if (msgType === 'send_peer_disconnect') {
@@ -57,13 +50,13 @@
   function connect() {
     //easyrtc.enableDebug(true);
 
-    easyrtc.setUsername(self.username);
-    easyrtc.initMediaSource(
+    system.setUsername(self.username);
+    system.initMediaSource(
       // success callback
       function() {
         // set the user own video
         var selfVideo = document.getElementById('selfVideo');
-        easyrtc.setVideoObjectSrc(selfVideo, easyrtc.getLocalStream());
+        system.setVideoObjectSrc(selfVideo, easyrtc.getLocalStream());
       },
       // failure callback
       function(errorCode, errmesg) {
@@ -77,27 +70,27 @@
         self.id = socketId;
 
         // event listeners to update list of active users
-        easyrtc.webSocket.on('ui_user_add', function(userData) {
+        system.webSocket.on('ui_user_add', function(userData) {
           elUsers.append('<div id=' + userData.id + '>' + userData.name + '</div>');
         });
-        easyrtc.webSocket.on('ui_user_remove', function(userId) {
+        system.webSocket.on('ui_user_remove', function(userId) {
           elUsers.find('#' + userId).remove();
         });
-        easyrtc.webSocket.on('ui_user_set', function(userList) {
+        system.webSocket.on('ui_user_set', function(userList) {
           for (id in userList) {
             elUsers.append('<div id=' + userList[id].id + '>' + userList[id].name + '</div>');
           }
         });
 
 
-        easyrtc.webSocket.on('connect_partner', function(user) {
+        system.webSocket.on('connect_partner', function(user) {
           if (user.caller) {
             performCall(user.partnerId);
           } else {
             connectMeToPartner(user.partnerId);
           }
         });
-        easyrtc.webSocket.on('disconnect_partner', function(partnerId) {
+        system.webSocket.on('disconnect_partner', function(partnerId) {
           // checks whether still connected to the same user
           if (partnerId == self.partnerId) {
             disconnectMeFromPartner();
@@ -105,7 +98,7 @@
         });
 
         // make the necessary updates on the server side for the new user
-        easyrtc.webSocket.emit('init_user', {
+        system.webSocket.emit('init_user', {
           'name': self.username
         });
       },
@@ -139,12 +132,6 @@
     var acceptedCB = function(isAccepted, callerId) {};
     easyrtc.call(self.partnerId, successCB, failureCB, acceptedCB);
   }
-
-  // auto-accept the call
-  easyrtc.setAcceptChecker(function(callerId, callback) {
-    //callback(callerId == self.partnerId);
-    callback(true);
-  });
 
   function hangupCall() {
     if (self.partnerId) {
