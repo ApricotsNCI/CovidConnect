@@ -17,68 +17,61 @@
   <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="../app.css" rel="stylesheet">
+</head>
 
 <body onload="displayMessage()">
 
-  <body onload="onlineUsers()">
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Covid Connect</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Profile.HTML">Profile</a></li>
+          <li><a href="chatroulette.html">Chat Roulette</a></li>
+          <li><a href="individualchat.html">Individual Chat</a></li>
+          <li><a href="supportpage.html">Support</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <header>
+    <img id="homepagebanner" src="../Imgs/bgchatroulette.jpg" alt="Background">
+  </header>
+  <!--Content-->
 
-    <body onload="onlineUsers()">
+  <body>
+    <div class="container-fluid height-fill" style="margin: auto;">
+      <div class="row height-fill pos-middle">
+        <div id="video_container" class="col-xs-2">
+        </div>
 
+        <div id="messages_container" class="col-xs-6 well height-fill">
 
-      </head>
+        </div>
 
-      <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="home.html">Covid Connect</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="Profile.HTML">Profile</a></li>
-                <li><a href="chatroulette.html">Chat Roulette</a></li>
-                <li><a href="individualchat.html">Individual Chat</a></li>
-                <li><a href="supportpage.html">Support</a></li>
-                <li><a href="settings.html">Settings</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <!-- Header -->
-        <header>
-          <img id="homepagebanner" src="../Imgs/bgchatroulette.jpg" alt="Background">
-        </header>
-        <!--Content-->
-
-        <body>
-          <div class="container-fluid height-fill" style="margin: auto;">
-            <div class="row height-fill pos-middle">
-              <div id="video_container" class="col-xs-2">
-              </div>
-
-              <div id="messages_container" class="col-xs-6 well height-fill">
-
-              </div>
-
-              <div id="user_container" class="col-xs-2 well height-fill">
-              </div>
-              <br><br> <br><br> <br>
-              <div id="button_container" class="col-xs-2">
-                <a class="btn btn-block btn-success" id="next_btn" title="Get a Random Stranger" href="rating.html">
-                  <i class="fa fa-forward fa-3x"></i>
-                  <span class="shortcut">Next</span>
-                </a>
-              </div>
-            </div>
-            <div class="row pos-bottom">
-              <div class="col-xs-7 col-xs-offset-2">
-                <textarea id="message" rows="3" name="message"> </textarea>
-              </div>
-              <button onclick="updateMessage()" class="btn" id="send_btn">Send</button>
-            </div>
-          </div>
-        </body>
+        <div id="user_container" class="col-xs-2 well height-fill">
+        </div>
+        <br><br> <br><br> <br>
+        <div id="button_container" class="col-xs-2">
+          <a class="btn btn-block btn-success" id="next_btn" title="Get a Random Stranger" href="rating.html">
+            <i class="fa fa-forward fa-3x"></i>
+            <span class="shortcut">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="row pos-bottom">
+        <div class="col-xs-7 col-xs-offset-2">
+          <textarea id="message" rows="3" name="message"> </textarea>
+        </div>
+        <button onclick="updateMessage()" class="btn" id="send_btn">Send</button>
+      </div>
+    </div>
+  </body>
 
 </html>

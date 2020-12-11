@@ -193,7 +193,7 @@ function updateMessage() {
 }
 
 
-function onlineUsers(){
+function onlineUsers() {
   var session = localStorage.getItem("session");
   $.ajax({
     url: '../Phps/onlineUsersphp.php',
