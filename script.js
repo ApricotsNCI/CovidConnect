@@ -154,56 +154,37 @@ function displayUserProfile() {
 }
 
 /*chatroulette*/
-
-var sio = require("socket.io");
-
-var userList = {};
-var waitingList = {};
-var socketCount = 0;
-
-io.sockets.on("connection", function(socket) {
-  socketCount++;
-
-  socket.on("init_user", function(userData) {
-    // update the list of users
-    userList[socket.id] = {
-      "username": socket.id,
-      "fullname": userData.name
-    };
-    // send the connected user list to the new user
-    socket.emit("ui_user_set", userList);
-    // send the new user to the all other users
-    socket.broadcast.emit("ui_user_add", userList[socket.id]);
+function displayMessage() {
+  var usermessage = localStorage.getItem("usermessage");
+  $.ajax({
+    url: '../Phps/displayMessagephp.php',
+    type: 'POST',
+    data: {
+      message: message
+    },
+    async: false,
+    success: function(data) {
+      var arr = JSON.parse(data);
+      document.getElementById("message").value = message;
+    },
+    cache: false
   });
-  socket.on("next_user", function() {
-    if (waitingList[socket.id]) return;
-
-    if (Object.keys(waitingList).length == 0) {
-      waitingList[socket.id] = true;
-    } else {
-      // pick a partner from the waiting list
-      socket.partnerId = Object.keys(waitingList)[0];
-
-      // connect two user with each other
-      socket.emit("connect_partner", {
-        'caller': false,
-        'partnerId': socket.partnerId
-      });
-      partnerSocket = io.sockets.socket(socket.partnerId);
-      partnerSocket.partnerId = socket.id;
-      partnerSocket.emit("connect_partner", {
-        'caller': true,
-        'partnerId': socket.id
-      });
-
-      // delete the partner from the waiting list
-      delete waitingList[socket.partnerId];
-    }
+}
+function onlineUsers(){
+  var session = localStorage.getItem("session");
+  $.ajax({
+    url: '../Phps/onlineUsersphp.php',
+    type: 'POST',
+    data: {
+      username: username,
+      session: session,
+      fullName: fullName
+    },
+    async: false,
+    success: function(data) {
+      var arr = JSON.parse(data);
+      document.getElementById("session").value = fullName;
+    },
+    cache: false
   });
-});
-
-socket.on('disconnect', function() {
-  socket.emit('disconnected');
-  online = online - 1;
-
-});
+}
