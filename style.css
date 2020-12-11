@@ -526,5 +526,9 @@ h2 {
   text-align: center;
   font-family: verdana;
 }
-=======
->>>>>>> be99aad0b580e76d80313f51d92f761bd08cda7c
+#Prep-Design {
+  background-color: pink;
+  width: 100%;
+  height: 90%;
+  float: center;
+}
