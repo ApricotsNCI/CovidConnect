@@ -155,17 +155,17 @@ function displayUserProfile() {
 
 /*chatroulette*/
 function displayMessage() {
-  var usermessage = localStorage.getItem("usermessage");
+  var userMessage = localStorage.getItem("userMessage");
   $.ajax({
     url: '../Phps/displayMessagephp.php',
     type: 'POST',
     data: {
-      message: message
+      userMessage: userMessage
     },
     async: false,
     success: function(data) {
       var arr = JSON.parse(data);
-      document.getElementById("message").value = message;
+      document.getElementById("userMessage").value = userMessage;
     },
     cache: false
   });

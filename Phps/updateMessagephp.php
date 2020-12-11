@@ -9,13 +9,13 @@ $conn = new mysqli($server, $user, $pass, $db);
 
 $username = mysqli_real_escape_string($conn,$_POST['username']);
 $fullName = mysqli_real_escape_string($conn,$_POST['fullName']);
-$usermessage = mysqli_real_escape_string($conn,$_POST['usermessage']);
+$userMessage = mysqli_real_escape_string($conn,$_POST['userMessage']);
 
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE chatroulette SET usermessage='$usermessage', WHERE username='$username'";
+$sql = "UPDATE chatroulette SET userMessage='$userMessage', WHERE username='$username'";
 
 if ($conn->query($sql) === TRUE) {
   echo "The messgae was sent successfully!";
