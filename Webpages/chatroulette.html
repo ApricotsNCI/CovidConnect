@@ -18,6 +18,7 @@
   <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="../app.css" rel="stylesheet">
 </head>
+
 <body>
   <!-- Navigation -->
   <nav class="navbar navbar-inverse">
@@ -41,44 +42,46 @@
   <header>
     <img id="homepagebanner" src="../Imgs/bgchatroulette.jpg" alt="Background">
   </header>
-<!--Content-->
+  <!--Content-->
+
   <body>
-  <div class="container-fluid height-fill" style="margin: auto;">
-    <div class="row height-fill pos-middle">
-      <div id="video_container" class="col-xs-2">
-      </div>
+    <div class="container-fluid height-fill" style="margin: auto;">
+      <div class="row height-fill pos-middle">
+        <div id="video_container" class="col-xs-2">
+        </div>
 
-      <div id="messages_container" class="col-xs-6 well height-fill">
+        <div id="messages_container" class="col-xs-6 well height-fill">
 
-      </div>
+        </div>
 
-      <div id="user_container" class="col-xs-2 well height-fill">
+        <div id="user_container" class="col-xs-2 well height-fill">
+        </div>
+        <br><br> <br><br> <br>
+        <div id="button_container" class="col-xs-2">
+          <a class="btn btn-block btn-success" id="next_btn" title="Get a Random Stranger" href="rating.html">
+            <i class="fa fa-forward fa-3x"></i>
+            <span class="shortcut">Next</span>
+          </a>
+        </div>
       </div>
-      <br><br> <br><br> <br>
-      <div id="button_container" class="col-xs-2">
-        <a class="btn btn-block btn-success" id="next_btn" title="Get a Random Stranger" href="rating.html">
-          <i class="fa fa-forward fa-3x"></i>
-          <span class="shortcut">Next</span>
-        </a>
+      <div class="row pos-bottom">
+        <div class="col-xs-7 col-xs-offset-2">
+          <textarea id="message" rows="3" name="message"> </textarea>
+        </div>
+        <div id="message_container" class="col-xs-2">
+          <a class="btn btn-success" id="send_btn">
+            <i class="fa fa-send fa-3x"></i>
+            <span class="shortcut" onclick="myFunction()">Send</span>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="row pos-bottom">
-      <div class="col-xs-7 col-xs-offset-2">
-        <textarea id="message" rows="3" name="message"> </textarea>
+    <script>
+      function myFunction() {
+        document.getElementById("message").value = text ";
+      };
       </div>
-      <div id="message_container" class="col-xs-2">
-        <a class="btn btn-success" id="send_btn">
-          <i class="fa fa-send fa-3x"></i>
-          <span class="shortcut" onclick="myFunction()">Send</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <script>
-  function myFunction() {
-  document.getElementById("message").value = text";
-}
-  </script>
+    </script>
 
   </body>
 

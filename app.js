@@ -1,10 +1,9 @@
 (function($) {
 
-  var self = {
-    id: null,
-    partnerId: null,
-    username: 'User_' + Math.random().toString(36).substring(4, 8)
-  };
+  function displayUser() {
+    var username = localStorage.getItem("username");
+    document.getElementById("usernameDis").innerHTML += username;
+  }
 
   // store the DOM elements to use later
   var elMessages = $('#messages_container');
@@ -53,18 +52,6 @@
     } else if (msgType === 'send_peer_disconnect') {
       disconnectMeFromPartner();
     }
-  });
-
-  // get the partner video stream - triggered on sucessful call
-  easyrtc.setStreamAcceptor(function(callerId, stream) {
-    var video = document.getElementById('partnerVideo');
-    easyrtc.setVideoObjectSrc(video, stream);
-  });
-
-  // stop to receive the partner video stream - triggered on hangup call
-  easyrtc.setOnStreamClosed(function(callerId) {
-    var video = document.getElementById('partnerVideo');
-    easyrtc.setVideoObjectSrc(video, '');
   });
 
   function connect() {
