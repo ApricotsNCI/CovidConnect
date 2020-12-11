@@ -170,6 +170,29 @@ function displayMessage() {
     cache: false
   });
 }
+
+
+function updateMessage() {
+  var username = localStorage.getItem("username");
+  var fullName = document.getElementById("fullName").value;
+  var userMessage = document.getElementById("userMessage").value;
+  $.ajax({
+    url: '../Phps/updateMessagephp.php',
+    type: 'POST',
+    data: {
+      username: username,
+      fullName: fullName,
+      userMessage: userMessage
+    },
+    async: false,
+    success: function(data) {
+      alert(data);
+    },
+    cache: false
+  });
+}
+
+
 function onlineUsers(){
   var session = localStorage.getItem("session");
   $.ajax({

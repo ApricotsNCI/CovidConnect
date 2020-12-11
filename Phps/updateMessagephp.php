@@ -8,27 +8,20 @@ $db = "heroku_ee0928b4ad437e0";
 $conn = new mysqli($server, $user, $pass, $db);
 
 $username = mysqli_real_escape_string($conn,$_POST['username']);
-
+$fullName = mysqli_real_escape_string($conn,$_POST['fullName']);
+$usermessage = mysqli_real_escape_string($conn,$_POST['usermessage']);
 
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
-$arr = array();
+$sql = "UPDATE chatroulette SET usermessage='$usermessage', WHERE username='$username'";
 
-$sql = "SELECT * FROM chatroulette WHERE username='$username'";
-$result = mysqli_query($conn,$sql);
-$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-
-if ($result == TRUE) {
-	if($row['userMessage']==""){
-		array_push($arr,"No message found!");
-	}else{
-		array_push($arr,$row['messages_container']);
-	}
-
-  echo json_encode($arr);
+if ($conn->query($sql) === TRUE) {
+  echo "The messgae was sent successfully!";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+
 ?>
