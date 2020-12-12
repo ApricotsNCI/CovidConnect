@@ -1,47 +1,29 @@
-import { Provider } from 'react-redux';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import * as SWRTC from '@andyet/simplewebrtc';
+/*********************************************
+ * by Gabriel 'Hezag' Nunes
+ * website: http://multiverso.me
+ * email: gabriel (at) multiverso (dot) me
+ * github: https://github.com/gnuns
+ **********************************************/
 
-// ====================================================================
-// IMPORTANT SETUP
-// ====================================================================
-// Replace `YOUR_PUBLISHABLE_API_KEY` here with the Publishable API Key
-// you received when signing up for SimpleWebRTC
-// --------------------------------------------------------------------
-const API_KEY = 'cd3a42254928ee8287b1ac1e';
-// ====================================================================
+(function(){
+  window.serverURI = 'http://localhost:3000';
+  window.onresize = onresize;
+  window.onbeforeunload = () => 'Are you sure you want to leave?';
 
-const ROOM_NAME = 'YOUR_ROOM_NAME';
-const ROOM_PASSWORD = 'YOUR_ROOM_PASSWORD';
-const CONFIG_URL = `https://api.simplewebrtc.com/config/guest/${cd3a42254928ee8287b1ac1e}`;
+  // scroll down on resize
+  function onresize(event) {
+    var body = document.getElementById('body');
+    body.scrollTop = body.scrollHeight;
+    var conversationBox = document.getElementById('conversation-box');
+    conversationBox.scrollTop = conversationBox.scrollHeight;
+  }
+  getOnlineCount();
+  setInterval(getOnlineCount, 5000);
 
-const store = SWRTC.createStore();
+  function getOnlineCount(){
+    $.getJSON(window.serverURI, function(info) {
+      $('.online-count>strong').text(info.usersOnline);
+    });
+  }
 
-ReactDOM.render(
-  <Provider store={store}>
-    <SWRTC.Provider configUrl={CONFIG_URL}>
-      {/* Render based on the connection state */}
-      <SWRTC.Connecting>
-        <h1>Connecting...</h1>
-      </SWRTC.Connecting>
-
-      <SWRTC.Connected>
-        <h1>Connected!</h1>
-        {/* Request the user's media */}
-        <SWRTC.RequestUserMedia audio video auto />
-
-        {/* Enable playing remote audio. */}
-        <SWRTC.RemoteAudioPlayer />
-
-        {/* Connect to a room with a name and optional password */}
-        <SWRTC.Room name={ROOM_NAME} password={ROOM_PASSWORD}>
-          {props => {
-            /* Use the rest of the SWRTC React Components to render your UI */
-          }}
-        </SWRTC.Room>
-      </SWRTC.Connected>
-    </SWRTC.Provider>
-  </Provider>,
-  document.getElementById('app')
-);
+})();
