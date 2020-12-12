@@ -9,12 +9,12 @@ import * as SWRTC from '@andyet/simplewebrtc';
 // Replace `YOUR_PUBLISHABLE_API_KEY` here with the Publishable API Key
 // you received when signing up for SimpleWebRTC
 // --------------------------------------------------------------------
-const API_KEY = 'YOUR_PUBLISHABLE_API_KEY';
+const API_KEY = 'cd3a42254928ee8287b1ac1e';
 // ====================================================================
 
 const ROOM_NAME = 'YOUR_ROOM_NAME';
 const ROOM_PASSWORD = 'YOUR_ROOM_PASSWORD';
-const CONFIG_URL = `https://api.simplewebrtc.com/config/guest/${API_KEY}`;
+const CONFIG_URL = `https://api.simplewebrtc.com/config/guest/${cd3a42254928ee8287b1ac1e}`;
 
 const store = SWRTC.createStore();
 
