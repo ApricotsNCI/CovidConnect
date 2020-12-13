@@ -246,3 +246,51 @@ function appendMessage(message) {
   messageElement.innerText = message
   messageContainer.append(messageElement)
 }
+
+/*rating*/
+function userRate(){
+  var username = localStorage.getItem("username");
+  var usernameTwo =  document.getElementById("testingUser");
+  var rating = 0;
+  var connection;
+  if(document.getElementById('starOne').checked){
+    rating = document.getElementById('starOne').value;
+  }else if(document.getElementById('starTwo').checked){
+    rating = document.getElementById('starTwo').value;
+  }else if(document.getElementById('starThree').checked){
+    rating = document.getElementById('starThree').value;
+  }else if(document.getElementById('starFour').checked){
+    rating = document.getElementById('starFour').value;
+  }else if(document.getElementById('starFive').checked){
+    rating = document.getElementById('starFive').value;
+  }
+  else{
+    alert("No value selected!")
+    return;
+  }
+
+  connection = document.getElementById("connectform").value;
+
+  if(connection=="Yes"){
+    connection=true;
+  }else{
+    connection=false;
+  }
+
+  $.ajax({
+    url: '../Phps/ratingphp.php',
+    type: 'POST',
+    data: {
+      username: username,
+      usernameTwo: usernameTwo,
+      rating: rating,
+      connection: connection
+    },
+    async: false,
+    success: function(data) {
+      alert(data);
+      location.replace("chatroulette.html");
+    },
+    cache: false
+  });
+}
