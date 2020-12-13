@@ -26,7 +26,7 @@ Talk.ready.then(function() {
         appId: "tV6gHbbq",
         me: me
     });
-    <?php $user = $db.getUser(11); ?>
+    <?php $users = $db.getUser(11); ?>
     var other = new Talk.User(
         <?php echo json_encode(array(
             "id" => strval($users->idusers),
