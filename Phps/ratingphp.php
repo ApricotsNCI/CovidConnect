@@ -7,10 +7,10 @@ $db = "heroku_ee0928b4ad437e0";
 
 $conn = new mysqli($server, $user, $pass, $db);
 
-$username = $conn,$_POST['username'];
-$usernameTwo = $conn,$_POST['usernameTwo'];
-$rating = $conn,$_POST['rating'];
-$connection = $conn,$_POST['connection'];
+$username =  mysqli_real_escape_string($conn,$_POST['username']);
+$usernameTwo =  mysqli_real_escape_string($conn,$_POST['usernameTwo']);
+$rating =  mysqli_real_escape_string($conn,$_POST['rating']);
+$connection =  mysqli_real_escape_string($conn,$_POST['connection']);
 
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
