@@ -280,7 +280,7 @@ function userRate(){
 
   $.ajax({
     url: '../Phps/ratingphp.php',
-    type: 'POST',
+    type: 'GET',
     data: {
       username: username,
       usernameTwo: usernameTwo,
