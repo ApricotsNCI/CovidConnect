@@ -359,8 +359,9 @@ h1 {
 
 .side {
   background: orange;
-  height: 24%;
-  margin-bottom: 3.3%;
+  height: 23%;
+  margin-bottom: 3.5%;
+  margin-top: auto;
   width: 100%;
 }
 
