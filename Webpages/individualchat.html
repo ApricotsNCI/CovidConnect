@@ -29,9 +29,9 @@ Talk.ready.then(function() {
     <?php $user = $db.getUser(11); ?>
     var other = new Talk.User(
         <?php echo json_encode(array(
-            "id" => strval($user->idusers),
-            "name" => $user->username,
-            "email" => $user->Email,
+            "id" => strval($users->idusers),
+            "name" => $users->username,
+            "email" => $users->Email,
             //"photoUrl" => $user->photoUrl,
             //"welcomeMessage" => "Hey, let's have a chat!"
         )); ?>
