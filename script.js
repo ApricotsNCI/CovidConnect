@@ -251,7 +251,7 @@ function appendMessage(message) {
 /*rating*/
 function userRate(){
   var username = localStorage.getItem("username");
-  var usernameTwo =  document.getElementById("testingUser");
+  var usernameTwo =  document.getElementById("testingUser").value;
   var rating = 0;
   var connection;
   if(document.getElementById('starOne').checked){
