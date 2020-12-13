@@ -250,6 +250,7 @@ function appendMessage(message) {
 
 /*rating*/
 function userRate(){
+  location.replace("chatroulette.html");
   var username = localStorage.getItem("username");
   var usernameTwo =  document.getElementById("testingUser").value;
   var rating = 0;
@@ -290,7 +291,6 @@ function userRate(){
     async: false,
     success: function(data) {
       alert(data);
-      location.replace("chatroulette.html");
     },
     cache: false
   });
