@@ -26,25 +26,16 @@ Talk.ready.then(function() {
         appId: "tV6gHbbq",
         me: me
     });
-    <?php $users = $db.getUser(11); ?>
-    var other = new Talk.User(
-        <?php echo json_encode(array(
-            "id" => strval($users->idusers),
-            "name" => $users->username,
-            "email" => $users->Email,
-            //"photoUrl" => $user->photoUrl,
-            //"welcomeMessage" => "Hey, let's have a chat!"
-        )); ?>
-    );
 
-  /*  var other = new Talk.User({
+
+  var other = new Talk.User({
         id: "6543210",
         name: "Sebastian",
         email: "Sebastian@example.com",
         photoUrl: "https://demo.talkjs.com/img/sebastian.jpg",
         welcomeMessage: "Hey, how can I help?"
     });
-*/
+
     var conversation = talkSession.getOrCreateConversation(Talk.oneOnOneId(me, other))
     conversation.setParticipant(me);
     conversation.setParticipant(other);
