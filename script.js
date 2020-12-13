@@ -211,3 +211,87 @@ function onlineUsers() {
     cache: false
   });
 }
+
+/* const socket = io('http://localhost:3000')
+const messageContainer = document.getElementById('message-container')
+const messageForm = document.getElementById('send-container')
+const messageInput = document.getElementById('message-input')
+
+const name = prompt('What is your name?')
+appendMessage('You joined')
+socket.emit('new-user', name)
+
+socket.on('chat-message', data => {
+  appendMessage(`${data.name}: ${data.message}`)
+})
+
+socket.on('user-connected', name => {
+  appendMessage(`${name} connected`)
+})
+
+socket.on('user-disconnected', name => {
+  appendMessage(`${name} disconnected`)
+})
+*/
+
+messageForm.addEventListener('submit', e => {
+  e.preventDefault()
+  const message = messageInput.value
+  appendMessage(`You: ${message}`)
+  socket.emit('send-chat-message', message)
+  messageInput.value = ''
+})
+
+function appendMessage(message) {
+  const messageElement = document.createElement('div')
+  messageElement.innerText = message
+  messageContainer.append(messageElement)
+}
+
+/*rating*/
+function userRate(){
+  var username = localStorage.getItem("username");
+  var usernameTwo =  document.getElementById("testingUser");
+  var rating = 0;
+  var connection;
+  if(document.getElementById('starOne').checked){
+    rating = document.getElementById('starOne').value;
+  }else if(document.getElementById('starTwo').checked){
+    rating = document.getElementById('starTwo').value;
+  }else if(document.getElementById('starThree').checked){
+    rating = document.getElementById('starThree').value;
+  }else if(document.getElementById('starFour').checked){
+    rating = document.getElementById('starFour').value;
+  }else if(document.getElementById('starFive').checked){
+    rating = document.getElementById('starFive').value;
+  }
+  else{
+    alert("No value selected!")
+    return;
+  }
+
+  connection = document.getElementById("connectform").value;
+
+  if(connection=="Yes"){
+    connection=true;
+  }else{
+    connection=false;
+  }
+
+  $.ajax({
+    url: '../Phps/ratingphp.php',
+    type: 'POST',
+    data: {
+      username: username,
+      usernameTwo: usernameTwo,
+      rating: rating,
+      connection: connection
+    },
+    async: false,
+    success: function(data) {
+      alert(data);
+      location.replace("chatroulette.html");
+    },
+    cache: false
+  });
+}
