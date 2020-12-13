@@ -9,35 +9,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../script.js"></script>
   <link href="../style.css" rel="stylesheet">
-  <style>
-    #message-container {
-      width: 70%;
-    }
-
-    #message-container div {
-      background-color: #CCC;
-      padding: 5px;
-      height: 60%;
-      float: left;
-    }
-
-    #message-container div:nth-child(2n) {
-      background-color: #FFF;
-    }
-
-    #send-container {
-      padding-bottom: 20%;
-      bottom: 0;
-      background-color: white;
-      max-width: 1200px;
-      width: 80%;
-      display: flex;
-    }
-
-    #message-input {
-      flex-grow: 1;
-    }
-  </style>
 </head>
 
 <body onload="displayMessage()">
@@ -63,14 +34,36 @@
   <header>
     <img id="homepagebanner" src="../Imgs/bgchatroulette.jpg" alt="Background">
   </header>
-  <!--Content-->
-  <div id="message-container"></div>
-  <form id="send-container">
-    <input type="text" id="message-input">
-    <button type="submit" id="send-button">Send</button>
-    <button><a href="rating.html">Next</a></button>
 
-  </form>
+  <div class="container-fluid height-fill">
+    <div class="row height-fill pos-middle">
+      <div id="video_container" class="col-xs-2"></div>
+      <div id="messages_container" class="col-xs-8 well" style="height:80%; width:55%;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div id="button_container" class="col-xs-1">
+        <a class="btn btn-block btn-success" id="next_btn" title="Get a Random Stranger" href="rating.html">
+          <span class="shortcut">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="row pos-bottom">
+      <div id="video_container" class="col-xs-2"></div>
+      <div class="col-xs-8">
+        <textarea id="message" rows="3" name="message" style="width:80%;"> </textarea>
+      </div>
+      <div id="button_container" class="col-xs-1" style="float:left;">
+        <a class="btn btn-block btn-success" id="next_btn" title="Send Message">
+          <span class="shortcut">Send</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
 </body>
-
 </html>

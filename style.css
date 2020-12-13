@@ -311,19 +311,27 @@ a {
 }
 
 /*ChatRoulette*/
-#messgae-container {
-  width: 80%;
+#messages-container {
+  width: 60%;
+  height: 50%;
   max-width: 1200px;
 }
 
-#message-container div {
+#messages-container div {
   background-color: #CCC;
   padding: 5px;
 }
 
-#message-container div:nth-child(2n) {
-  background-color: #fff;
+#send-container {
+  padding-bottom: 20%;
+  bottom: 0;
+  background-color: white;
+  max-width: 1200px;
+  width: 80%;
+  display: flex;
+  height: 20%;
 }
+
 
 /* SupportPage Div styles */
 h1 {
