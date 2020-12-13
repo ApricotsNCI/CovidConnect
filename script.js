@@ -253,7 +253,7 @@ function userRate(){
   var username = localStorage.getItem("username");
   var usernameTwo =  document.getElementById("testingUser").value;
   var rating = 0;
-  var connection;
+  var invitation;
   if(document.getElementById('starOne').checked){
     rating = document.getElementById('starOne').value;
   }else if(document.getElementById('starTwo').checked){
@@ -270,12 +270,12 @@ function userRate(){
     return;
   }
 
-  connection = document.getElementById("connectform").value;
+  invitation = document.getElementById("connectform").value;
 
-  if(connection=="Yes"){
-    connection=true;
+  if(invitation=="Yes"){
+    invitation=true;
   }else{
-    connection=false;
+    invitation=false;
   }
 
   $.ajax({
@@ -285,7 +285,7 @@ function userRate(){
       username: username,
       usernameTwo: usernameTwo,
       rating: rating,
-      connection: connection
+      invitation: invitation
     },
     async: false,
     success: function(data) {
