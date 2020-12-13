@@ -47,11 +47,11 @@
         <form action="">
           <fieldset>
             <div class="rating">
-              <input type="radio" name="rating" value="1" aria-label="1 star">
-              <input type="radio" name="rating" value="2" aria-label="2 star">
-              <input type="radio" name="rating" value="3" aria-label="3 star">
-              <input type="radio" name="rating" value="4" aria-label="4 star">
-              <input type="radio" name="rating" value="5" aria-label="5 star">
+              <input id="starOne" type="radio" name="rating" value="1" aria-label="1 star">
+              <input id="starTwo" type="radio" name="rating" value="2" aria-label="2 star">
+              <input id="starThree" type="radio" name="rating" value="3" aria-label="3 star">
+              <input id="starFour" type="radio" name="rating" value="4" aria-label="4 star">
+              <input id="starFive" type="radio" name="rating" value="5" aria-label="5 star">
             </div>
           </fieldset>
         </form><br>
@@ -63,7 +63,8 @@
           </select>
         </form>
         <br><br>
-        <button type="submit" id="send-button"><a href="chatroulette.html">Next</a></button>
+        <input type="text" id="testingUser" value="Enter a user to test this feature!">
+        <button type="submit" id="send-button" onclick="userRate()">Next</button>
       </div>
       <div class="well" style="margin-right:1%; margin-left:12%; float:left;">
         <img src="../Imgs/PfpPlaceholder.png" width="80%" height="80%"></img>
