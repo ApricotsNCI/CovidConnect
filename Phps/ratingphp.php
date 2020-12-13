@@ -18,9 +18,9 @@ if ($conn->connect_error) {
 /* Gathering user ids */
 $sql = "SELECT idusers FROM users WHERE username='$username'";
 $result = mysqli_query($conn,$sql);
-/*$sqlTwo = "SELECT idusers FROM users WHERE username='$usernameTwo'";
+$sqlTwo = "SELECT idusers FROM users WHERE username='$usernameTwo'";
 $resultTwo = mysqli_query($conn,$sqlTwo);
-/*Inserting rating
+/*Inserting rating*/
 $sqlThree ="INSERT INTO ratings(idUserOne,idUserTwo,starRating,connect)
 VALUES('$result','$resultTwo','$rating','$invitation')";
 
@@ -28,6 +28,6 @@ if ($conn->query($sqlThree) === TRUE) {
   echo "Rating logged!";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
-}*/
+}
 echo $result;
 ?>
