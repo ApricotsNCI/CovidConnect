@@ -153,7 +153,7 @@ function displayUserProfile() {
   });
 }
 
-/*chatroulette*/
+/*chatroulette
 function displayMessage() {
   var userMessage = localStorage.getItem("userMessage");
   $.ajax({
@@ -212,7 +212,7 @@ function onlineUsers() {
   });
 }
 
-/* const socket = io('http://localhost:3000')
+const socket = io('http://localhost:3000')
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
@@ -232,7 +232,7 @@ socket.on('user-connected', name => {
 socket.on('user-disconnected', name => {
   appendMessage(`${name} disconnected`)
 })
-*/
+
 
 messageForm.addEventListener('submit', e => {
   e.preventDefault()
@@ -246,7 +246,7 @@ function appendMessage(message) {
   const messageElement = document.createElement('div')
   messageElement.innerText = message
   messageContainer.append(messageElement)
-}
+}*/
 
 /*rating*/
 function userRate(){
