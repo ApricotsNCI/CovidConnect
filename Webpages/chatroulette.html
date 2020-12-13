@@ -13,15 +13,18 @@
     #message-container {
       width: 70%;
     }
+
     #message-container div {
       background-color: #CCC;
       padding: 5px;
-      height:60%;
+      height: 60%;
       float: left;
     }
+
     #message-container div:nth-child(2n) {
       background-color: #FFF;
     }
+
     #send-container {
       padding-bottom: 20%;
       bottom: 0;
@@ -30,11 +33,13 @@
       width: 80%;
       display: flex;
     }
+
     #message-input {
       flex-grow: 1;
     }
   </style>
 </head>
+
 <body onload="displayMessage()">
   <!-- Navigation -->
   <nav class="navbar navbar-inverse">
@@ -63,8 +68,9 @@
   <form id="send-container">
     <input type="text" id="message-input">
     <button type="submit" id="send-button">Send</button>
-  </form>
+    <button><a href="ratings.html">Next</a></button>
 
-  </body>
+  </form>
+</body>
 
 </html>
