@@ -311,12 +311,10 @@ a {
 }
 
 /*ChatRoulette*/
-#messages-container {
-  width: 60%;
-  height: 50%;
-  max-width: 1200px;
+#message{
+  background-color: #ffff;
+  padding: 0px;
 }
-
 #messages-container div {
   background-color: #CCC;
   padding: 5px;
